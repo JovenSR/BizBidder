@@ -14,7 +14,8 @@ class ServiceProvidersController < ApplicationController
 
   # GET /service_providers/new
   def new
-    @service_provider = ServiceProvider.new
+    puts params[:id]
+    @service_provider = ServiceProvider.new()
   end
 
   # GET /service_providers/1/edit

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :proposals
   root to: 'requests#index'
   resources :service_providers
    

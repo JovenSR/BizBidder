@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @proposal.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @proposal.price %>
+</p>
+
+<p>
+  <strong>Accept:</strong>
+  <%= @proposal.accept %>
+</p>
+
+<%= link_to 'Edit', edit_proposal_path(@proposal) %> |
+<%= link_to 'Back', proposals_path %>

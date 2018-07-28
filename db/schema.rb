@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_27_183724) do
+ActiveRecord::Schema.define(version: 2018_07_28_214036) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "proposals", force: :cascade do |t|
+    t.string "description"
+    t.float "price"
+    t.boolean "accept"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "request_id"
+    t.bigint "service_provider_id"
+    t.index ["request_id"], name: "index_proposals_on_request_id"
+    t.index ["service_provider_id"], name: "index_proposals_on_service_provider_id"
+  end
 
   create_table "requests", force: :cascade do |t|
     t.string "name"

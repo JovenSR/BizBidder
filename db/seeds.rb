@@ -13,6 +13,7 @@ user5 = User.create!firstName: 'Don', lastName: 'Johnson',  email:'dj@gmail.com'
 user6 = User.create!firstName: 'Carmen', lastName: 'Shin',  email:'cs@gmail.com', phone:'778-987-5122'
 
 
+
 user1.requests.create!({
   name: 'Makeup Artist needed for wedding',
   description: 'I have a wedding next year and I need a team of makeup artists to do makeup for 20 ladies. Ideally someone who knows how to do nails and hair as well',
@@ -86,4 +87,6 @@ user2.service_providers.create!({
   website: 'http://www.reddit.com',
   license: false
 })
+
+
 
