@@ -4,7 +4,14 @@ class RequestsController < ApplicationController
   # GET /requests
   # GET /requests.json
   def index
-    @requests = Request.all
+    if params[:category]
+      @requests = Request.where("category = 'Beauty Services'")
+      puts "TEST ", @requests.inspect
+    else
+      puts "we are in the index page without the params"
+      @requests = Request.all
+    end
+     
   end
 
   # GET /requests/1
