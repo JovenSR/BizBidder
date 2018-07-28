@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @request.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @request.description %>
+</p>
+
+<p>
+  <strong>Budget:</strong>
+  <%= @request.budget %>
+</p>
+
+<p>
+  <strong>Proposaldeadline:</strong>
+  <%= @request.proposalDeadline %>
+</p>
+
+<p>
+  <strong>Eventdate:</strong>
+  <%= @request.eventDate %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @request.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @request.city %>
+</p>
+
+<p>
+  <strong>Province:</strong>
+  <%= @request.province %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @request.category %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @request.status %>
+</p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>

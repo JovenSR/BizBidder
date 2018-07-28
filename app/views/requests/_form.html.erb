@@ -1,0 +1,72 @@
+<%= form_with(model: request, local: true) do |form| %>
+  <% if request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(request.errors.count, "error") %> prohibited this request from being saved:</h2>
+
+      <ul>
+      <% request.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name, class:'control-label col-md-2' %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description, class:'control-label col-md-2' %>
+    <%= form.text_area :description,hide_label: true, placeholder: "Leave details description" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :budget, class:'control-label col-md-2' %>
+    <%= form.text_field :budget %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'ProposalDeadline', class:'control-label col-md-2' %>
+    <%= form.date_field :proposalDeadline %>
+  </div>
+
+  <div class="field">
+    <%= form.label :eventDate, class:'control-label col-md-2' %>
+    <%= form.date_field :eventDate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address, class:'control-label col-md-2' %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city , class:'control-label col-md-2'%>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :province, class:'control-label col-md-2' %>
+    <%= form.text_field :province, :value => 'BC' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category, class:'control-label col-md-2' %> 
+    <%= form.select :category, ['Beauty Services', 'Event Services', 'Farm & Garden Services']%>
+  </div>
+
+  <div class="field">
+    <%= form.label :status, class:'control-label col-md-2' %>
+    <%= form.text_field :status, :value => 'Open' %>
+  </div>
+
+  <div class="field"   >
+   
+  <%= hidden_field :user_id, 1 %>
+</div>
+
+  <div class="actions ">
+    <%= form.submit nil, :class => 'btn btn-secondary' %>
+  </div>
+<% end %>

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  budget: MyString
+  proposalDeadline: MyString
+  eventDate: 
+  address: MyString
+  city: MyString
+  province: MyString
+  category: MyString
+  status: MyString
+
+two:
+  name: MyString
+  description: MyString
+  budget: MyString
+  proposalDeadline: MyString
+  eventDate: 
+  address: MyString
+  city: MyString
+  province: MyString
+  category: MyString
+  status: MyString
