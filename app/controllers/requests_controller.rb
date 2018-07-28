@@ -4,9 +4,10 @@ class RequestsController < ApplicationController
   # GET /requests
   # GET /requests.json
   def index
-    if params[:category]
-      @requests = Request.where("category = 'Beauty Services'")
-      puts "TEST ", @requests.inspect
+    if params[:category]  
+      @requests = Request.where("category = ?", params[:category])
+    elsif params[:user_id]  
+      @requests = Request.where("user_id = ?", params[:user_id])
     else
       puts "we are in the index page without the params"
       @requests = Request.all
