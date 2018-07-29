@@ -50,7 +50,7 @@
   <%= @request.status %>
 </p>
 
-<%= link_to 'Edit', edit_request_path(@request) %> |
-<%= link_to 'Back', requests_path %>
-<%= link_to 'Response', new_proposal_path(:id => @request.id) %>
+<%= link_to 'Edit', edit_request_path(@request) , :class => 'btn btn-info' %>  
+<%= link_to 'Back', requests_path , :class => 'btn btn-info' %>  
+<%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'btn btn-info' %>
 

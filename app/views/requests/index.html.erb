@@ -32,9 +32,9 @@
          
         <td><%= request.category %></td>
         <td><%= request.status %></td>
-        <td><%= link_to 'Details', request %></td>
-        <td><%= link_to 'Edit', edit_request_path(request) %></td>
-        <td><%= link_to 'Delete', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Details', request , :class => 'btn btn-info' %></td>
+        <td><%= link_to 'Edit', edit_request_path(request)  , :class => 'btn btn-info' %></td>
+        <td><%= link_to 'Delete', request, method: :delete, data: { confirm: 'Are you sure?' } , :class => 'btn btn-info' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -42,9 +42,7 @@
 
 <br>
 
-<%= link_to 'New Request', new_request_path %>  <%= link_to 'Beauty Services', requests_path(:category => 'Beauty Services') %>  
-<%= link_to 'Event Services', requests_path(:category => 'Event Services') %>
-<%= link_to 'Farm & Garden Services', requests_path(:category => 'Farm & Garden Services') %>
-<%= link_to 'Food Services', requests_path(:category => 'Food Services') %>
-<%= link_to 'My Request', requests_path(:user_id => 1) %>
+ 
 
+
+ 
