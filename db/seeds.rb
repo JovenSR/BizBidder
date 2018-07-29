@@ -88,5 +88,30 @@ user2.service_providers.create!({
   license: false
 })
 
+user3.service_providers.create!({
+  companyName: 'Jashan Tent Rental',
+  street: '456 Granville St',
+  city: 'Vancouver',
+  province: 'BC',
+  postalCode: 'V7L 3K5',
+  email: 'Jashan@gmail.ca',
+  phone: '604-555-5555',
+  serviceType: 'Event Services',
+  website: 'http://www.reddit.com',
+  license: false
+})
+user4.service_providers.create!({
+  companyName: 'Laura Beauty Salon',
+  street: '456 Granville St',
+  city: 'Vancouver',
+  province: 'BC',
+  postalCode: 'V7L 3K5',
+  email: 'Jashan@gmail.ca',
+  phone: '604-555-5555',
+  serviceType: 'Beauty Services',
+  website: 'http://www.reddit.com',
+  license: true
+})
+
 
 

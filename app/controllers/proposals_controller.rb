@@ -34,6 +34,8 @@ class ProposalsController < ApplicationController
     # @description = params[:proposal][:description]
     # @accept = false 
     # @proposal = Proposal.new(:price => @price,:request_id => @request_id, :service_provider_id => @service_provider_id, :description => @description, :accept => @accept)
+    byebug
+    puts "Valid Proposal? #{@proposal.valid?}"
 
     respond_to do |format|
       if @proposal.save
@@ -78,6 +80,6 @@ class ProposalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def proposal_params
-      params.require(:proposal).permit(:description, :price, :accept)
+      params.require(:proposal).permit(:description, :price, :accept, :request_id, :service_provider_id)
     end
 end

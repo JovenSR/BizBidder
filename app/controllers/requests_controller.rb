@@ -18,6 +18,9 @@ class RequestsController < ApplicationController
   # GET /requests/1
   # GET /requests/1.json
   def show
+    @request = Request.find(params[:id])
+    @proposals = Proposal.where(request_id: [1])
+     
   end
 
   # GET /requests/new

@@ -25,6 +25,7 @@ class ServiceProvidersController < ApplicationController
   # POST /service_providers
   # POST /service_providers.json
   def create
+     
     @service_provider = ServiceProvider.new(service_provider_params)
 
     respond_to do |format|

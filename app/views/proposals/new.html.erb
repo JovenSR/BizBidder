@@ -13,8 +13,9 @@
     <%= f.text_field :price %>
   </div>
 
-  <%= hidden_field_tag 'request_id', params[:id] %>
-  <%= hidden_field_tag 'service_provider_id', 1 %>
+  <%= f.text_field :request_id,  value: 1 %>
+  <%= f.text_field :service_provider_id,  value: 3 %> 
+   
 
   <div class="actions">
     <%= f.submit 'Submit Bid' %>
