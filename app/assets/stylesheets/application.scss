@@ -10,3 +10,16 @@
 body {
   padding-top: 70px;
 }
+.footer {
+  position: fixed;
+  bottom: 0px;
+  height: 40px;
+   
+  width: 100%; 
+  background: #343A40;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
