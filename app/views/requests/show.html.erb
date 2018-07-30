@@ -54,27 +54,19 @@
 <%= link_to 'Back', requests_path , :class => 'btn btn-info' %>  
 <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'btn btn-info' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Accept</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="response">
 
-  <tbody>
+  <div class="response-rows">
     <% @proposals.each do |proposal| %>
-      <tr>
-        <td><%= proposal.description %></td>
-        <td><%= proposal.price %></td>
-        <td><%= proposal.accept %></td>
-        <td><%= link_to 'Show', proposal %></td>
-        <td><%= link_to 'Edit', edit_proposal_path(proposal) %></td>
-        <td><%= link_to 'Destroy', proposal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="response-row" >
+        <span class="proposal-label">Description:</span><span><%= proposal.description %></span>
+        <span class="proposal-label">Price:</span><span><%= proposal.price %></span>
+        <span class="proposal-label">Accept:</span><span><%= proposal.accept %></span>
+        <span><%= link_to 'Show', proposal %></span>
+        <span><%= link_to 'Edit', edit_proposal_path(proposal) %></span>
+        <span><%= link_to 'Destroy', proposal, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
 

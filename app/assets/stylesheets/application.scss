@@ -23,3 +23,24 @@ body {
   align-items: center;
   color: white;
 }
+
+.response {
+  margin-bottom: 60px;
+  margin-top: 50px;
+}
+
+.response-rows {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid blue;
+   
+}
+
+.response-row {
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  width: 48%;
+  margin: 5px;
+}
