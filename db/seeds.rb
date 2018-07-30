@@ -106,7 +106,7 @@ user4.service_providers.create!({
   city: 'Vancouver',
   province: 'BC',
   postalCode: 'V7L 3K5',
-  email: 'Jashan@gmail.ca',
+  email: 'laura@gmail.ca',
   phone: '604-555-5555',
   serviceType: 'Beauty Services',
   website: 'http://www.reddit.com',

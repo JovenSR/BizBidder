@@ -2,43 +2,26 @@
 
 <h1>Requests</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Budget</th>
-      <th>Proposaldeadline</th>
-      <th>Eventdate</th>
+<div class="request-rows">
+  <% @requests.each do |request| %>
+     
+    <div class="request-row <%="request_#{request.status}" %>">
+      <div><span>Name:</span><span><%= request.name %></span></div>
+      <div><span>Description:</span><span><%= request.description %></span></div>
+      <div><span>Budget:</span> <span><%= request.budget %></span></div>
+      <div><span>Proposaldeadline:</span><span><%= request.proposalDeadline %></span></div>
+      <div><span>Eventdate:</span><span><%= request.eventDate %></span></div>
+      <div><span>City:</span><span><%= request.city %></span></div>
+      <div><span>Category:</span><span><%= request.category %></span></div>
+      <div><span>Status:</span> <span><%= request.status %></span></div>
        
-      <th>City</th>
-       
-      <th>Category</th>
-      <th>Status</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @requests.each do |request| %>
-      <tr>
-        <td><%= request.name %></td>
-        <td><%= request.description %></td>
-        <td><%= request.budget %></td>
-        <td><%= request.proposalDeadline %></td>
-        <td><%= request.eventDate %></td>
-        
-        <td><%= request.city %></td>
-         
-        <td><%= request.category %></td>
-        <td><%= request.status %></td>
-        <td><%= link_to 'Details', request , :class => 'btn btn-info' %></td>
-        <td><%= link_to 'Edit', edit_request_path(request)  , :class => 'btn btn-info' %></td>
-        <td><%= link_to 'Delete', request, method: :delete, data: { confirm: 'Are you sure?' } , :class => 'btn btn-info' %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <span><%= link_to 'Details', request , :class => 'btn btn-info' %></span>
+        <span><%= link_to 'Edit', edit_request_path(request)  , :class => 'btn btn-info' %></span>
+        <span><%= link_to 'Delete', request, method: :delete, data: { confirm: 'Are you sure?' } , :class => 'btn btn-info' %></span>
+    </div>
+  <% end %>
+     
+</div>
 
 <br>
 
