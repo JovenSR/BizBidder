@@ -5,12 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-user1 = User.create!firstName: 'Joven', lastName: 'Rai',  email:'jv@gmail.com', phone:'778-989-1020'
-user2 = User.create!firstName: 'Khoa', lastName: 'Nguyen',  email:'kn@gmail.com', phone:'778-889-1122'
-user3 = User.create!firstName: 'Jashan', lastName: 'Khela',  email:'jd@gmail.com', phone:'778-351rake -5555'
-user4 = User.create!firstName: 'Laura', lastName: 'Tan',  email:'lt@hotmail.com', phone:'604-489-1122'
-user5 = User.create!firstName: 'Don', lastName: 'Johnson',  email:'dj@gmail.com', phone:'555-689-1122'
-user6 = User.create!firstName: 'Carmen', lastName: 'Shin',  email:'cs@gmail.com', phone:'778-987-5122'
+user1 = User.create!firstName: 'Joven', lastName: 'Rai',  email:'jv@gmail.com', phone:'778-989-1020', role: 'user'
+user2 = User.create!firstName: 'Khoa', lastName: 'Nguyen',  email:'kn@gmail.com', phone:'778-889-1122', role: 'user'
+user3 = User.create!firstName: 'Jashan', lastName: 'Khela',  email:'jd@gmail.com', phone:'778-351rake -5555', role: 'service_provider'
+user4 = User.create!firstName: 'Laura', lastName: 'Tan',  email:'lt@hotmail.com', phone:'604-489-1122', role: 'service_provider'
+user5 = User.create!firstName: 'Don', lastName: 'Johnson',  email:'dj@gmail.com', phone:'555-689-1122', role: 'service_provider'
+user6 = User.create!firstName: 'Carmen', lastName: 'Shin',  email:'cs@gmail.com', phone:'778-987-5122', role: 'service_provider'
 
 
 
