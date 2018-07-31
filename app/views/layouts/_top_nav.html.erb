@@ -9,13 +9,13 @@
          <%= link_to 'Requests +', new_request_path, class:'nav-link' %>
        </li> 
        <li class="nav-item dropdown">
-       <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            Services
-       </a>
-       <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-         <%= link_to 'All Service Providers', service_providers_path, class:'dropdown-item' %>
-         <%= link_to 'My Service', service_providers_path(:service_provider_id => 1), class:'dropdown-item' %>
-         <li><a class="dropdown-item dropdown-toggle" href="#">Service By Category</a>
+         </a>
+         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+           <%= link_to 'All Service Providers', service_providers_path, class:'dropdown-item' %>
+           <%= link_to 'My Service', service_providers_path(:service_provider_id => 1), class:'dropdown-item' %>
+           <li><a class="dropdown-item dropdown-toggle" href="#">Service By Category</a>
              <ul class="dropdown-menu">
                <%= link_to 'Beauty Services', requests_path(:category => 'Beauty Services') , :class => 'dropdown-item' %>
                <%= link_to 'Event Services', requests_path(:category => 'Event Services') , :class => 'dropdown-item' %>

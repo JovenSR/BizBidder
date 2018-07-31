@@ -35,6 +35,21 @@
     <%= form.label :avatar %>
     <%= form.text_field :avatar %>
   </div>
+ 
+  <div class="field">
+    <%= form.label :userrole %>
+    <%= form.text_field :userrole %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Password Confirmation" %>
+    <%= form.password_field :password_confirmation %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
