@@ -11,16 +11,17 @@
  }
 
  .request-rows {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid blue;
-  width: 100%;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-gap: 20px; 
+   border: 1px solid blue;
+   width: 100%;
 }
 
 .request-row {
   border: 1px solid red;
-  margin: 5px;
-  width: 23%;
+  
+   
 }
 
 .request_Taken {
