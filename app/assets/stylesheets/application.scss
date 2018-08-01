@@ -4,16 +4,19 @@
 @import "font-awesome";
 @import "requests";
 @import "proposals";
-@font-face{
-  font-family:"Georgia";
-  src:asset-url("haymaker-webfont.ttf") format("truetype");
-}
  
 
 
 body {
+  font-family: 'Fauna One', serif;
+   
   padding-top: 70px;
 }
+h1,h5 {
+  font-family: 'Playfair Display', serif; 
+  text-align: center;
+}
+
 .footer {
   position: fixed;
   bottom: 0px;

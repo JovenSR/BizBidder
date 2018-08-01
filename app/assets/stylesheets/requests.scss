@@ -14,15 +14,15 @@
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
    grid-gap: 20px; 
-   border: 1px solid blue;
-   width: 100%;
+   grid-row-gap: 1.5rem;
+   width: 100%; 
+}
+.request-row {
+  padding: 8px;
+  box-shadow: 4px 4px 4px darkgrey;
 }
 
-.request-row {
-  border: 1px solid red;
-  
-   
-}
+
 
 .request_Taken {
   background: green;
@@ -32,4 +32,11 @@
 .request_Open {
   background: lightgray;
   color: black;
+}
+ 
+
+.footer-right{
+  display: flex;
+  justify-content: flex-end;
+   
 }

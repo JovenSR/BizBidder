@@ -51,7 +51,7 @@ request3 = user1.requests.create!({
 })
 
 request4 = user1.requests.create!({
-  name: 'Hair styliest needed for wedding',
+  name: 'Hair stylist needed for wedding',
   description: 'I have a wedding next year and I need a team of hair stylists to do makeup for 20 ladies. Ideally someone who knows how to do nails and hair as well',
   budget: '$1500',
   proposalDeadline: '2018/08/11',
