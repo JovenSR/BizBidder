@@ -26,8 +26,6 @@ request1 = user1.requests.create!({
   status: 'Open'
 })
 
- 
-
 request2 = user2.requests.create!({
   name: 'Caterer needed for party',
   description: 'Im hosting a party at my house and need a caterer service to provide Indian food. There will be 85 people at the party.',
@@ -49,6 +47,18 @@ request3 = user1.requests.create!({
   city: 'Burnaby',
   province: 'BC',
   category: 'Farm & Garden Services',
+  status: 'Open'
+})
+
+request4 = user1.requests.create!({
+  name: 'Hair styliest needed for wedding',
+  description: 'I have a wedding next year and I need a team of hair stylists to do makeup for 20 ladies. Ideally someone who knows how to do nails and hair as well',
+  budget: '$1500',
+  proposalDeadline: '2018/08/11',
+  eventDate: '2018/09/30',
+  city: 'Vancouver',
+  province: 'BC',
+  category: 'Beauty Services',
   status: 'Open'
 })
 
@@ -118,12 +128,31 @@ user6.service_providers.create!({
   city: 'Vancouver',
   province: 'BC',
   postalCode: 'V7L 3K5',
-  email: 'laura@gmail.ca',
+  email: 'cs@gmail.com',
   phone: '604-555-5555',
   serviceType: 'Beauty Services',
   website: 'http://www.reddit.com',
   license: true
 })
+
+service_provider_6 = user6.service_providers.create!({
+  companyName: 'Beauty Salon Service',
+  street: '134 street',
+  city: 'Surrey',
+  province: 'BC',
+  postalCode: 'V6M 1L9',
+  email: 'jashanservice@email.ca',
+  phone: '778-555-5555',
+  serviceType: 'Beauty Services',
+  website: 'http://www.google.com',
+  license: true
+})
+service_provider_6.proposals.create!({
+  description: 'I would like to take this request. My company is specialized in beauty services',
+  price: '3700',
+  request_id: 1 
+})
+
 
 
 

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
+  get '/my_proposals' => 'service_providers#my_proposals'
   resources :proposals
   root to: 'requests#index'
   resources :service_providers

@@ -8,12 +8,15 @@ class ServiceProvidersController < ApplicationController
     @service_providers = ServiceProvider.all
   end
 
+  def my_proposals
+    sp = current_user.service_providers
+    @proposals = sp[0].proposals
+  end
+
   # GET /service_providers/1
   # GET /service_providers/1.json
   def show
-    byebug
     sp = current_user.service_providers
-    
     @proposals = sp[0].proposals
   end
 
@@ -71,7 +74,9 @@ class ServiceProvidersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_service_provider
-      @service_provider = ServiceProvider.find(params[:id])
+      sp = current_user.service_providers
+        @service_provider = ServiceProvider.find(params[:id] )  
+      
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

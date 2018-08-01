@@ -20,7 +20,8 @@
          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
            <%= link_to 'All Service Providers', service_providers_path, class:'dropdown-item' %>
            <% if current_user && current_user.userrole=='service_provider' %>
-            <%= link_to 'My Response', service_provider_path(:id => current_user.id), class:'dropdown-item' %>
+            <%= link_to 'My Proposals', my_proposals_path, class:'dropdown-item' %>
+             
            <% end%>
 
            <li><a class="dropdown-item dropdown-toggle" href="#">Service By Category</a>
