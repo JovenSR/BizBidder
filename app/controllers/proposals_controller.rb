@@ -4,12 +4,16 @@ class ProposalsController < ApplicationController
   # GET /proposals
   # GET /proposals.json
   def index
-    @proposals = Proposal.all
+    @service_provider = User.find(current_user.id)
+    @proposals = Proposal.where("service_provider_id = ?", @service_provider.id)
   end
 
   # GET /proposals/1
   # GET /proposals/1.json
   def show
+    @proposal = Proposal.find(params[:id])
+    @service_provider = ServiceProvider.find(@proposal.service_provider_id)
+    @user = User.find(@service_provider.user_id)
   end
 
   # GET /proposals/new

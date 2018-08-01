@@ -15,5 +15,8 @@
   <%= @proposal.accept %>
 </p>
 
-<%= link_to 'Edit', edit_proposal_path(@proposal) %> |
-<%= link_to 'Back', proposals_path %>
+
+<% if current_user.id == @user.id %>
+  <%= link_to 'Edit', edit_proposal_path(@proposal) %> |
+  <%= link_to 'Back', proposals_path %>
+<% end %>

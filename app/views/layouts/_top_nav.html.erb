@@ -5,8 +5,13 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
+  
        <li class="nav-item active">
-         <%= link_to 'Requests +', new_request_path, class:'nav-link' %>
+         <% if current_user && current_user.userrole!='service_provider' %>
+           <%= link_to 'Requests +', new_request_path, class:'nav-link' %>
+         <% elsif !current_user %>
+           <%= link_to 'Requests +', login_path, class:'nav-link' %>
+         <% end%>
        </li> 
        <li class="nav-item dropdown">
          <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -14,7 +19,10 @@
          </a>
          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
            <%= link_to 'All Service Providers', service_providers_path, class:'dropdown-item' %>
-           <%= link_to 'My Service', service_providers_path(:service_provider_id => 1), class:'dropdown-item' %>
+           <% if current_user && current_user.userrole=='service_provider' %>
+            <%= link_to 'My Response', service_provider_path(:id => current_user.id), class:'dropdown-item' %>
+           <% end%>
+
            <li><a class="dropdown-item dropdown-toggle" href="#">Service By Category</a>
              <ul class="dropdown-menu">
                <%= link_to 'Beauty Services', requests_path(:category => 'Beauty Services') , :class => 'dropdown-item' %>
@@ -22,21 +30,18 @@
                <%= link_to 'Farm & Garden Services', requests_path(:category => 'Farm & Garden Services') , :class => 'dropdown-item' %>
                <%= link_to 'Food Services', requests_path(:category => 'Food Services') , :class => 'dropdown-item' %>
                <%= link_to 'My Request', requests_path(:user_id => 1) , :class => 'dropdown-item' %>
-                    
 
-
-                   <li>
-                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle='dropdown'>Subsubmenu</a>
-                       <ul class="dropdown-menu">
-                           <li><a class="dropdown-item" href="#">Subsubmenu action aa</a></li>
-                           <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
-                       </ul>
-                   </li>
-
-               </ul>
+               <li>
+                 <a class="dropdown-item dropdown-toggle" href="#" data-toggle='dropdown'>Subsubmenu</a>
+                 <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Subsubmenu action aa</a></li>
+                    <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                 </ul>
+               </li> 
+             </ul>
             
            </li>
-        </ul>
+         </ul>
        </li>
        <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -44,7 +49,9 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <%= link_to 'All Requests', root_path, class:'dropdown-item' %>
-              <%= link_to 'My Requests', requests_path(:user_id => 1), class:'dropdown-item' %>
+              <% if current_user && current_user.userrole=='user' %>
+               <%= link_to 'My Requests', requests_path(:user_id => current_user.id), class:'dropdown-item' %>
+              <% end%>
               <li><a class="dropdown-item dropdown-toggle" href="#">By Category</a>
                   <ul class="dropdown-menu">
                     <%= link_to 'Beauty Services', requests_path(:category => 'Beauty Services') , :class => 'dropdown-item' %>
@@ -69,5 +76,7 @@
             </ul>
        </li>
     </ul>
+    
   </div>
+   
 </nav>

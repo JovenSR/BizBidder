@@ -4,12 +4,17 @@ class ServiceProvidersController < ApplicationController
   # GET /service_providers
   # GET /service_providers.json
   def index
+    
     @service_providers = ServiceProvider.all
   end
 
   # GET /service_providers/1
   # GET /service_providers/1.json
   def show
+    byebug
+    sp = current_user.service_providers
+    
+    @proposals = sp[0].proposals
   end
 
   # GET /service_providers/new
