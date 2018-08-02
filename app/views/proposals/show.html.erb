@@ -14,9 +14,8 @@
   <strong>Accept:</strong>
   <%= @proposal.accept %>
 </p>
-
-
-<% if current_user.id == @user.id %>
+<% if current_user.id == @service_provider.user_id %>
   <%= link_to 'Edit', edit_proposal_path(@proposal) %> |
   <%= link_to 'Back', proposals_path %>
 <% end %>
+

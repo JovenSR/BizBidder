@@ -12,11 +12,9 @@
     <%= f.label 'Bid Price' %>
     <%= f.text_field :price %>
   </div>
-
-  <%= f.text_field :request_id,  value: 1 %>
-  <%= f.text_field :service_provider_id,  value: 3 %> 
-   
-
+  <%= f.hidden_field :request_id, :value => @request.id %>
+  <%= f.hidden_field :service_provider_id, :value => @sp[0].id %>
+ 
   <div class="actions">
     <%= f.submit 'Submit Bid' %>
   </div>
