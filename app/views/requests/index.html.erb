@@ -15,7 +15,12 @@
       </div>
       <div class="request-row-footer">
         <em>
-          <span class="footer-right"><%= link_to 'Details', request , :class => 'btn btn-info' %></span>
+          <% if current_user %>
+            <span class="footer-right"><%= link_to 'Details', request , :class => 'btn btn-info' %></span>
+          <% else %>
+            <span class="footer-right"><%= link_to 'Details', login_path , :class => 'btn btn-info' %></span>
+          <% end %>
+
           <% if current_user && current_user.id == request.user_id %>
             <span class="footer-right"><%= link_to 'Edit', edit_request_path(request)  , :class => 'btn btn-info' %></span>
             <span class="footer-right"><%= link_to 'Delete', request, method: :delete, data: { confirm: 'Are you sure?' } , :class => 'btn btn-info' %></span>

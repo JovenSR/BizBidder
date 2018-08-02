@@ -19,7 +19,7 @@
 }
 .request-row {
   padding: 8px;
-  box-shadow: 4px 4px 4px rgb(27, 27, 27); 
+  box-shadow: 4px 4px 4px rgb(27, 27, 27);
   position: relative;
 }
 .request-row:hover {
@@ -35,7 +35,7 @@
 }
 
 .request_Open {
-  color: #fff; 
+  color: #fff;
   background-color: rgba(0,0,0,.6);
 }
 
@@ -61,17 +61,6 @@
   justify-content: flex-end;
 }
 
-figure {
-	width: 100%;
-	margin: 0;
-	padding: 760px 0 0 0;
-	position: absolute;
-	left: 0;
-	bottom: 0px;
-	overflow: hidden;
-	background: url(clouds_tile.jpg);
-	animation: clouds_animation 95s linear infinite;
-}
 
 @keyframes clouds_animation {
 	0% { background-position: 0 0; }
