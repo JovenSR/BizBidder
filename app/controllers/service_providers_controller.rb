@@ -10,14 +10,14 @@ class ServiceProvidersController < ApplicationController
 
   def my_proposals
     sp = current_user.service_providers
-    @proposals = sp[0].proposals
+    @proposals = sp.proposals
   end
 
   # GET /service_providers/1
   # GET /service_providers/1.json
   def show
     sp = current_user.service_providers
-    @proposals = sp[0].proposals
+    @proposals = sp.proposals
   end
 
   # GET /service_providers/new

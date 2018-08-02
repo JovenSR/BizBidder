@@ -20,8 +20,7 @@ class RequestsController < ApplicationController
   def show
     @request = Request.find(params[:id]) 
     @proposals = Proposal.where(request_id: [1])
-     
-     
+    @sp = current_user.service_providers 
   end
 
   # GET /requests/new

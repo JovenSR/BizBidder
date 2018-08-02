@@ -1,3 +1,23 @@
 // Place all the styles related to the service_providers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.service-provider-rows {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px; 
+  grid-row-gap: 1.5rem;
+  width: 100%; 
+}
+.service-provider-row {
+  background: lightgray;
+  color: black;
+  padding: 8px;
+  box-shadow: 4px 4px 4px darkgrey;
+   
+}
+
+.service-provider-row-footer{ 
+ 
+  display: flex;
+  justify-content: flex-end;
+}

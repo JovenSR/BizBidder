@@ -20,6 +20,7 @@
 .request-row {
   padding: 8px;
   box-shadow: 4px 4px 4px darkgrey;
+  position: relative;
 }
 
 
@@ -38,5 +39,12 @@
 .footer-right{
   display: flex;
   justify-content: flex-end;
-   
+  margin: 5px;
+}
+
+.request-row-footer{ 
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
 }
