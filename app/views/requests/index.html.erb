@@ -4,29 +4,31 @@
 
 <div class="request-rows">
   <% @requests.each do |request| %>
-     
+
     <div class="request-row <%="request_#{request.status}" %>">
-      <div class="request-line"><h5><%= request.name %></h5></div> 
-      <div class="request-line"><span>Description: </span><span><%= truncate(request.description, :length => 30 ) %></span></div>
-      <div class="request-line"><span>Budget: </span> <span><%= request.budget %></span></div>
-      <div class="request-line"><span>Proposal deadline: </span><span><%= request.proposalDeadline %></span></div>
+      <div class="request-line"><h5><%= request.name %></h5></div>
+      <div class="request-lines">
+        <div class="request-line"><span>Description: </span><span><%= truncate(request.description, :length => 30 ) %></span></div>
+        <div class="request-line"><span>Budget: </span> <span><%= request.budget %></span></div>
+        <div class="request-line"><span>Proposal deadline: </span><span><%= request.proposalDeadline %></span></div>
       <div class="request-line"><span>Status: </span> <span><%= request.status %></span></div>
-       
+      </div>
       <div class="request-row-footer">
-        <span class="footer-right"><%= link_to 'Details', request , :class => 'btn btn-info' %></span>
-        <% if current_user && current_user.id == request.user_id %>
-          <span class="footer-right"><%= link_to 'Edit', edit_request_path(request)  , :class => 'btn btn-info' %></span>
-          <span class="footer-right"><%= link_to 'Delete', request, method: :delete, data: { confirm: 'Are you sure?' } , :class => 'btn btn-info' %></span>
-        <% end %>
-      </div>  
+        <em>
+          <span class="footer-right"><%= link_to 'Details', request , :class => 'btn btn-info' %></span>
+          <% if current_user && current_user.id == request.user_id %>
+            <span class="footer-right"><%= link_to 'Edit', edit_request_path(request)  , :class => 'btn btn-info' %></span>
+            <span class="footer-right"><%= link_to 'Delete', request, method: :delete, data: { confirm: 'Are you sure?' } , :class => 'btn btn-info' %></span>
+          <% end %>
+        </em>
+      </div>
     </div>
   <% end %>
-     
+
 </div>
 
 <br>
 
- 
 
 
- 
+

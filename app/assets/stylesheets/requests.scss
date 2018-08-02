@@ -13,14 +13,18 @@
  .request-rows {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-   grid-gap: 20px; 
+   grid-gap: 20px;
    grid-row-gap: 1.5rem;
-   width: 100%; 
+   width: 100%;
 }
 .request-row {
   padding: 8px;
-  box-shadow: 4px 4px 4px darkgrey;
+  box-shadow: 4px 4px 4px rgb(27, 27, 27); 
   position: relative;
+}
+.request-row:hover {
+  background-color:  #9c9053;
+  color:white
 }
 
 
@@ -31,10 +35,10 @@
 }
 
 .request_Open {
-  background: lightgray;
-  color: black;
+  color: #fff; 
+  background-color: rgba(0,0,0,.6);
 }
- 
+
 
 .footer-right{
   display: flex;
@@ -42,9 +46,35 @@
   margin: 5px;
 }
 
-.request-row-footer{ 
+.request-row-footer{
   right: 0;
   bottom: 0;
   display: flex;
   justify-content: flex-end;
+}
+.request-row-footer > em{
+  display: flex;
+  justify-content: flex-end;
+}
+.request-row-footer:hover > em:hover{
+  display: flex;
+  justify-content: flex-end;
+}
+
+figure {
+	width: 100%;
+	margin: 0;
+	padding: 760px 0 0 0;
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	overflow: hidden;
+	background: url(clouds_tile.jpg);
+	animation: clouds_animation 95s linear infinite;
+}
+
+@keyframes clouds_animation {
+	0% { background-position: 0 0; }
+
+	100% { background-position: -2122px 0; }
 }

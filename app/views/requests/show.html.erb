@@ -1,70 +1,68 @@
 <p id="notice"><%= notice %></p>
 
 <div>
-   
   <h5><%= @request.name %></h5>
 </div>
 <div class="request-container"> 
-<div>
-  <strong>Description:</strong>
-  <%= @request.description %>
+  <div>
+    <span>
+      <strong>Description:</strong>
+      <%= @request.description %>
+    </span>
+    <div>
+      <span>
+        <strong>Budget:</strong>
+        <%= @request.budget %>
+      </span>
+      <span>
+        <strong>Event date:</strong>
+        <%= @request.eventDate %>
+      </span>
+    </div>
+  </div>
+
+  <div>
+    <strong>Response before:</strong>
+    <%= @request.proposalDeadline %>
+  </div>
+
+    <div>
+      <strong>City:</strong>
+      <%= @request.city %>,
+      <strong>Province:</strong>
+      <%= @request.province %>
+    </div>
+
+    <div>
+      <strong>Category:</strong>
+      <%= @request.category %>
+    </div>
+
+    <div>
+      <strong>Status:</strong>
+      <%= @request.status %>
+    </div>
 </div>
-
-<div> 
-<p>
-  <strong>Budget:</strong>
-  <%= @request.budget %>
-</p>
-
-<p>
-  <strong>Proposal deadline:</strong>
-  <%= @request.proposalDeadline %>
-</p>
-
-<p>
-  <strong>Event date:</strong>
-  <%= @request.eventDate %>
-</p>
- 
-
-  <p>
-    <strong>City:</strong>
-    <%= @request.city %>,
-    <strong>Province:</strong>
-    <%= @request.province %>
-  </p>
-
- 
-
-  <p>
-    <strong>Category:</strong>
-    <%= @request.category %>
-  </p>
-
-  <p>
-    <strong>Status:</strong>
-    <%= @request.status %>
-  </p>
-</div>
-</div> 
-
-<% if current_user && current_user.id == @request.user_id %>
- <%= link_to 'Edit', edit_request_path(@request) , :class => 'btn btn-info' %>
-<% end %>
-<%= link_to 'Back', requests_path , :class => 'btn btn-info' %>
-<% if current_user && current_user.userrole=='service_provider' %>
-  <% if @sp[0].proposals.length == 0 %>
-    <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'btn btn-info' %>
+  
+<div class="request-row-footer">
+  <% if current_user && current_user.id == @request.user_id %>
+    <%= link_to 'Edit', edit_request_path(@request) , :class => 'btn btn-info' %>
+  <% end %>
+  <%= link_to 'Back', requests_path , :class => 'btn btn-info' %>
+  <% if current_user && current_user.userrole=='service_provider' %>
+    <% if @sp[0].proposals.length == 0 %>
+      <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'btn btn-info' %>
   <% else %>
     <% @sp[0].proposals.each do |proposal| %>
-     <% if proposal.request_id != @request.id %>
-       <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'btn btn-info' %>
-     <% else %>
-       <%= link_to 'Edit', edit_proposal_path(:id => proposal.id) , :class => 'btn btn-info' %>
-       <% end %>
+      <% if proposal.request_id != @request.id %>
+        <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'btn btn-info' %>
+      <% else %>
+        <%= link_to 'Edit', edit_proposal_path(:id => proposal.id) , :class => 'btn btn-info' %>
+        <% end %>
+      <% end %>
     <% end %>
-   <% end %>
-<% end %>
+  <% end %>
+</div>
 
 <% if current_user &&  current_user.id == @request.user_id %>
   <div class="response">
@@ -72,18 +70,21 @@
     <div class="response-rows">
       <% @proposals.each do |proposal| %>
         <div class="response-row" >
-          <span class="proposal-label">Description:</span><span><%= proposal.description %></span>
-          <span class="proposal-label">Price:</span><span><%= proposal.price %></span>
+          <span class="proposal-label">Description</span><span><%= proposal.description %></span>
+          <span class="proposal-label">Price: <%=   number_to_currency(proposal.price) %></span>
           
           <span class="proposal-label">Accept:</span><%= content_tag(:span, proposal.accept, :class => "accept_#{proposal.accept}") %>
-          <span><%= link_to 'Show', proposal %></span>
-          <% if current_user &&  current_user.userrole == 'service_provider' %>
-            <span><%= link_to 'Edit', edit_proposal_path(proposal) %></span>
-            <span><%= link_to 'Destroy', proposal, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-          <% end %>
+          <div class="request-row-footer">
+            <span class="footer-right"><%= link_to 'Detail', proposal, :class => 'btn btn-info' %></span>
+            <% if current_user &&  current_user.userrole == 'service_provider' %>
+              <span class="footer-right"><%= link_to 'Edit', edit_proposal_path(proposal) %></span>
+              <span class="footer-right"><%= link_to 'Destroy', proposal, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+            <% end %>
+          </div>
         </div>
       <% end %>
     </div>
+  </div>  
 <% end %>
-</div>
+ 
 
