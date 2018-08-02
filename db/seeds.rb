@@ -17,7 +17,7 @@ user6 = User.create!firstName: 'Carmen', lastName: 'Shin',  email:'cs@gmail.com'
 request1 = user1.requests.create!({
   name: 'Makeup Artist needed for wedding',
   description: 'I have a wedding next year and I need a team of makeup artists to do makeup for 20 ladies. Ideally someone who knows how to do nails and hair as well',
-  budget: '$1500',
+  budget: '1500',
   proposalDeadline: '2018/08/11',
   eventDate: '2018/09/30',
   city: 'Vancouver',
@@ -29,7 +29,7 @@ request1 = user1.requests.create!({
 request2 = user2.requests.create!({
   name: 'Caterer needed for party',
   description: 'Im hosting a party at my house and need a caterer service to provide Indian food. There will be 85 people at the party.',
-  budget: '$3500',
+  budget: '3500',
   proposalDeadline: '2018/10/01',
   eventDate: '2018/10/11',
   city: 'Surrey',
@@ -41,7 +41,7 @@ request2 = user2.requests.create!({
 request3 = user1.requests.create!({
   name: 'Tree trimming needed',
   description: 'Large cedar tree needs trimming.',
-  budget: '$300',
+  budget: '300',
   proposalDeadline: '2018/08/30',
   eventDate: '2018/09/05',
   city: 'Burnaby',
@@ -53,7 +53,7 @@ request3 = user1.requests.create!({
 request4 = user1.requests.create!({
   name: 'Hair stylist needed for wedding',
   description: 'I have a wedding next year and I need a team of hair stylists to do makeup for 20 ladies. Ideally someone who knows how to do nails and hair as well',
-  budget: '$1500',
+  budget: '1500',
   proposalDeadline: '2018/08/11',
   eventDate: '2018/09/30',
   city: 'Vancouver',
@@ -65,7 +65,7 @@ request4 = user1.requests.create!({
 user2.requests.create!({
   name: 'Tent needed for wedding',
   description: '3 big tents needed for wedding pre-parties held at my home',
-  budget: '$3000',
+  budget: '3000',
   proposalDeadline: '2018/08/30',
   eventDate: '2018/09/30',
   city: 'Vancouver',
