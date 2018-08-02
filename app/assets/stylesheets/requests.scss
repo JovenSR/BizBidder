@@ -61,17 +61,7 @@
   justify-content: flex-end;
 }
 
-figure {
-	width: 100%;
-	margin: 0;
-	padding: 760px 0 0 0;
-	position: absolute;
-	left: 0;
-	bottom: 0px;
-	overflow: hidden;
-	background: url(clouds_tile.jpg);
-	animation: clouds_animation 95s linear infinite;
-}
+ 
 
 @keyframes clouds_animation {
 	0% { background-position: 0 0; }
