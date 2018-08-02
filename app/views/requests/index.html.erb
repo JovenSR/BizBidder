@@ -9,7 +9,7 @@
       <div class="request-line"><h5><%= request.name %></h5></div>
       <div class="request-lines">
         <div class="request-line"><span>Description: </span><span><%= truncate(request.description, :length => 30 ) %></span></div>
-        <div class="request-line"><span>Budget: </span> <span><%= request.budget %></span></div>
+        <div class="request-line"><span>Budget: </span> <span><%= number_to_currency(request.budget) %></span></div>
         <div class="request-line"><span>Proposal deadline: </span><span><%= request.proposalDeadline %></span></div>
       <div class="request-line"><span>Status: </span> <span><%= request.status %></span></div>
       </div>

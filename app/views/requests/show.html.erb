@@ -12,7 +12,7 @@
     <div>
       <span>
         <strong>Budget:</strong>
-        <%= @request.budget %>
+        <%= number_to_currency(@request.budget) %>
       </span>
       <span>
         <strong>Event date:</strong>
