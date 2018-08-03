@@ -72,8 +72,13 @@
         <div class="response-row" >
           <span class="proposal-label">Description</span><span><%= proposal.description %></span>
           <span class="proposal-label">Price: <%=   number_to_currency(proposal.price) %></span>
-
-          <span class="proposal-label">Accept:</span><%= content_tag(:span, proposal.accept, :class => "accept_#{proposal.accept}") %>
+          <form method='POST' action="/update_accept">
+            <input hidden name="proposalid" value="<%= proposal.id %>" />
+            <input hidden name="requestid" value="<%= @request.id %>" />
+            <span class="proposal-label">Accept:</span><%= check_box_tag(:span, proposal.accept, false, :class => "accept_#{proposal.accept}") %>
+          <button>Submit</button>
+          </form>
+       
           <div class="request-row-footer">
             <span class="footer-right"><%= link_to 'Detail', proposal, :class => 'btn btn-info' %></span>
             <% if current_user &&  current_user.userrole == 'service_provider' %>

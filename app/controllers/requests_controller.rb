@@ -1,4 +1,5 @@
 class RequestsController < ApplicationController
+  protect_from_forgery
   before_action :set_request, only: [:show, :edit, :update, :destroy]
 
   # GET /requests
@@ -15,11 +16,19 @@ class RequestsController < ApplicationController
      
   end
 
+  def update_accept
+    #Model.where(:email =>"test@test.com",:code => "chejd").update(:password => "password")
+    proposalid = params[:proposalid]
+    requestid = params[:requestid]
+    Proposal.where(:id => proposalid).update(:accept => true)
+    Request.where(:id => requestid).update(:status => 'Taken')
+  end
+
   # GET /requests/1
   # GET /requests/1.json
   def show
     @request = Request.find(params[:id]) 
-    @proposals = Proposal.where(request_id: [1])
+    @proposals = Proposal.where(request_id: [@request.id])
     @sp = current_user.service_providers 
   end
 

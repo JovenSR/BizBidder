@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
   get '/my_proposals' => 'service_providers#my_proposals'
+  post '/update_accept' => 'requests#update_accept'
   resources :proposals
   root to: 'requests#index'
   resources :service_providers

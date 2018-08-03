@@ -14,6 +14,7 @@ class ProposalsController < ApplicationController
     @proposal = Proposal.find(params[:id])
     @service_provider = ServiceProvider.find(@proposal.service_provider_id)
     
+    
   end
 
   # GET /proposals/new
@@ -32,15 +33,9 @@ class ProposalsController < ApplicationController
   def create
        
     @proposal = Proposal.new(proposal_params)
-     
-    # @price = params[:proposal][:price].gsub(/\D/, '').to_i
-    # @request_id = params[:proposal][:request_id].to_i
-    # @service_provider_id = params[:proposal][:service_provider_id].to_i
-    # @description = params[:proposal][:description]
-    # @accept = false 
-    # @proposal = Proposal.new(:price => @price,:request_id => @request_id, :service_provider_id => @service_provider_id, :description => @description, :accept => @accept)
+    
     byebug
-    puts "Valid Proposal? #{@proposal.valid?}"
+     
 
     respond_to do |format|
       if @proposal.save
