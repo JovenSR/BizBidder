@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-user1 = User.create!firstName: 'Joven', lastName: 'Rai',  email:'jv@gmail.com', phone:'778-989-1020', userrole: 'user',  password_digest: User.digest('123')
+user1 = User.create!firstName: 'Joven', lastName: 'Rai',  email:'tyson111@gmail.com', phone:'778-989-1020', userrole: 'user',  password_digest: User.digest('123')
 user2 = User.create!firstName: 'Khoa', lastName: 'Nguyen',  email:'kn@gmail.com', phone:'778-889-1122', userrole: 'user',  password_digest: User.digest('123')
 user3 = User.create!firstName: 'Hamish', lastName: 'Gray',  email:'hg@gmail.com', phone:'778-981-1547', userrole: 'user',  password_digest: User.digest('123')
 user4 = User.create!firstName: 'Johnathan', lastName: 'Singh',  email:'js@gmail.com', phone:'604-876-1822', userrole: 'user',  password_digest: User.digest('123')
