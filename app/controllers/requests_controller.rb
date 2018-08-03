@@ -22,6 +22,7 @@ class RequestsController < ApplicationController
     requestid = params[:requestid]
     Proposal.where(:id => proposalid).update(:accept => true)
     Request.where(:id => requestid).update(:status => 'Taken')
+    UserMailer.accept_email(proposalid).deliver_now
   end
 
   # GET /requests/1
