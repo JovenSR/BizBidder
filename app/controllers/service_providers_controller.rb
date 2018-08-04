@@ -4,8 +4,15 @@ class ServiceProvidersController < ApplicationController
   # GET /service_providers
   # GET /service_providers.json
   def index
-    
-    @service_providers = ServiceProvider.all
+    if params[:serviceType]
+      serviceType = params[:serviceType]
+      @service_providers = ServiceProvider.where(serviceType: serviceType)
+      puts '@service_providers is'
+      puts @service_providers
+    else
+      @service_providers = ServiceProvider.all
+    end
+
   end
 
   def my_proposals
@@ -15,7 +22,9 @@ class ServiceProvidersController < ApplicationController
 
   # GET /service_providers/1
   # GET /service_providers/1.json
-  def show 
+
+
+  def show
   end
 
   # GET /service_providers/new
@@ -31,7 +40,7 @@ class ServiceProvidersController < ApplicationController
   # POST /service_providers
   # POST /service_providers.json
   def create
-     
+
     @service_provider = ServiceProvider.new(service_provider_params)
 
     respond_to do |format|
@@ -73,8 +82,8 @@ class ServiceProvidersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_service_provider
       sp = current_user.service_providers
-        @service_provider = ServiceProvider.find(params[:id] )  
-      
+        @service_provider = ServiceProvider.find(params[:id] )
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -5,14 +5,14 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-  
+
        <li class="nav-item active">
          <% if current_user && current_user.userrole!='service_provider' %>
            <%= link_to 'Requests +', new_request_path, class:'nav-link' %>
          <% elsif !current_user %>
            <%= link_to 'Requests +', login_path, class:'nav-link' %>
          <% end%>
-       </li> 
+       </li>
        <li class="nav-item dropdown">
          <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            Services
@@ -21,16 +21,15 @@
            <%= link_to 'All Service Providers', service_providers_path, class:'dropdown-item' %>
            <% if current_user && current_user.userrole=='service_provider' %>
             <%= link_to 'My Proposals', my_proposals_path, class:'dropdown-item' %>
-             
+
            <% end%>
 
            <li><a class="dropdown-item dropdown-toggle" href="#">Service By Category</a>
              <ul class="dropdown-menu">
-               <%= link_to 'Beauty Services', requests_path(:category => 'Beauty Services') , :class => 'dropdown-item' %>
-               <%= link_to 'Event Services', requests_path(:category => 'Event Services') , :class => 'dropdown-item' %>
-               <%= link_to 'Farm & Garden Services', requests_path(:category => 'Farm & Garden Services') , :class => 'dropdown-item' %>
-               <%= link_to 'Food Services', requests_path(:category => 'Food Services') , :class => 'dropdown-item' %>
-               <%= link_to 'My Request', requests_path(:user_id => 1) , :class => 'dropdown-item' %>
+               <%= link_to 'Beauty Services', service_providers_path(:serviceType => 'Beauty Services') , :class => 'dropdown-item' %>
+               <%= link_to 'Event Services', service_providers_path(:serviceType => 'Event Services') , :class => 'dropdown-item' %>
+               <%= link_to 'Farm & Garden Services', service_providers_path(:serviceType => 'Farm & Garden Services') , :class => 'dropdown-item' %>
+               <%= link_to 'Food Services', service_providers_path(:serviceType => 'Food Services') , :class => 'dropdown-item' %>
 
                <li>
                  <a class="dropdown-item dropdown-toggle" href="#" data-toggle='dropdown'>Subsubmenu</a>
@@ -38,9 +37,9 @@
                     <li><a class="dropdown-item" href="#">Subsubmenu action aa</a></li>
                     <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
                  </ul>
-               </li> 
+               </li>
              </ul>
-            
+
            </li>
          </ul>
        </li>
@@ -59,8 +58,7 @@
                     <%= link_to 'Event Services', requests_path(:category => 'Event Services') , :class => 'dropdown-item' %>
                     <%= link_to 'Farm & Garden Services', requests_path(:category => 'Farm & Garden Services') , :class => 'dropdown-item' %>
                     <%= link_to 'Food Services', requests_path(:category => 'Food Services') , :class => 'dropdown-item' %>
-                    <%= link_to 'My Request', requests_path(:user_id => 1) , :class => 'dropdown-item' %>
-                         
+
 
 
                         <li><a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
@@ -72,12 +70,22 @@
 
                     </ul>
                 </li>
-                 
+
                 </li>
             </ul>
        </li>
+       <li class="nav-item">
+         <a class="nav-link disabled" href="#">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a>
+      </li>
     </ul>
-    
+    <form class="form-inline my-2 my-lg-0 form-profile">
+         <% if current_user %>
+            <%= current_user.email %>
+            <%= link_to 'Logout', logout_path, class:'nav-link nav-item loginout-link' %>
+          <% else %>
+            <%= link_to 'Login', login_path, class:'nav-link loginout-link' %>
+          <% end%>
+   </form>
   </div>
-   
+
 </nav>
