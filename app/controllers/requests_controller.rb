@@ -23,7 +23,8 @@ class RequestsController < ApplicationController
     Proposal.where(:id => proposalid).update(:accept => true)
     Request.where(:id => requestid).update(:status => 'Taken')
     UserMailer.accept_email(proposalid).deliver_now
-    redirect_to request_path(requestid)
+    puts "AFTER EMAIL SENT"
+    #redirect_to request_path(requestid)
   end
 
   # GET /requests/1

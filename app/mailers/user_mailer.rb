@@ -16,7 +16,8 @@ class UserMailer < ApplicationMailer
     proposal = Proposal.find(proposalid)
     sp = ServiceProvider.find(proposal.service_provider_id)
     @user = User.find(sp.user_id)
-    mail(to: @user.email, subject: 'Proposal Accepted')
+    puts  "ALL THREE COMPONENTS FOUND"
+    mail(to: 'tysonrai111@gmail.com', subject: 'Proposal Accepted')
   end
 
 end

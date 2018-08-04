@@ -13,14 +13,14 @@ class ProposalsController < ApplicationController
   def show
     @proposal = Proposal.find(params[:id])
     @service_provider = ServiceProvider.find(@proposal.service_provider_id)
-    
+
   end
 
   # GET /proposals/new
   def new
-    @request = Request.find(params[:id]) 
+    @request = Request.find(params[:id])
     @proposal = Proposal.new(params[:request_id])
-    @sp = current_user.service_providers 
+    @sp = current_user.service_providers
   end
 
   # GET /proposals/1/edit
@@ -30,11 +30,10 @@ class ProposalsController < ApplicationController
   # POST /proposals
   # POST /proposals.json
   def create
-       
+
     @proposal = Proposal.new(proposal_params)
-    
-    byebug
-     
+
+
 
     respond_to do |format|
       if @proposal.save

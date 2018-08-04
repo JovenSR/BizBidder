@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-user1 = User.create!firstName: 'Joven', lastName: 'Rai',  email:'tyson111@gmail.com', phone:'778-989-1020', userrole: 'user',  password_digest: User.digest('123')
+user1 = User.create!firstName: 'Joven', lastName: 'Rai',  email:'tysonrai111@gmail.com', phone:'778-989-1020', userrole: 'user',  password_digest: User.digest('123')
 user2 = User.create!firstName: 'Khoa', lastName: 'Nguyen',  email:'kn@gmail.com', phone:'778-889-1122', userrole: 'user',  password_digest: User.digest('123')
 user3 = User.create!firstName: 'Hamish', lastName: 'Gray',  email:'hg@gmail.com', phone:'778-981-1547', userrole: 'user',  password_digest: User.digest('123')
 user4 = User.create!firstName: 'Johnathan', lastName: 'Singh',  email:'js@gmail.com', phone:'604-876-1822', userrole: 'user',  password_digest: User.digest('123')
@@ -149,7 +149,7 @@ service_provider_1 = user10.service_providers.create!({
 service_provider_1.proposals.create!({
   description: 'I would like to take this request. My company has multiple large tents that would be perfect for your event. Contact me for more details.',
   price: '2800',
-  request_id: 5 
+  request_id: 5
 })
 
 service_provider_2 = user11.service_providers.create!({
@@ -167,7 +167,7 @@ service_provider_2 = user11.service_providers.create!({
 service_provider_2.proposals.create!({
   description: 'I would like to take this request. My company is specialized in catering food for parties.',
   price: '3500',
-  request_id: 2 
+  request_id: 2
 })
 
 service_provider_3 = user12.service_providers.create!({
