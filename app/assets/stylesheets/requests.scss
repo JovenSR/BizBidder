@@ -18,6 +18,8 @@
    width: 100%;
 }
 .request-row {
+  display: flex;
+  flex-direction: column;
   padding: 8px;
   box-shadow: 4px 4px 4px rgb(27, 27, 27);
   position: relative;
@@ -60,8 +62,8 @@
   display: flex;
   justify-content: flex-end;
 }
- 
- 
+
+
 
 @keyframes clouds_animation {
 	0% { background-position: 0 0; }

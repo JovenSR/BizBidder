@@ -45,51 +45,51 @@
 </div>
 
 <div class="request-row-footer">
-  <% if current_user && current_user.id == @request.user_id && @request.status != 'Taken' %>
-    <%= link_to 'Edit', edit_request_path(@request) , :class => 'btn btn-info' %>
-  <% end %>
   <%= link_to 'Back', requests_path , :class => 'btn btn-info' %>
-  <% if current_user && current_user.userrole=='service_provider' %>
-    <% if @sp[0].proposals.length == 0 %>
-      <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'btn btn-info' %>
-  <% else %>
-    <% @sp[0].proposals.each do |proposal| %>
-      <% if proposal.request_id != @request.id %>
-        <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'btn btn-info' %>
-      <% else %>
-        <%= link_to 'Edit', edit_proposal_path(:id => proposal.id) , :class => 'btn btn-info' %>
+
+  <% if current_user %>
+    <% if current_user.id == @request.user_id && @request.status != 'Taken' %>
+      <%= link_to 'Edit', edit_request_path(@request) , :class => 'btn btn-info' %>
+    <% end %>
+    <% if current_user.userrole =='service_provider' %>
+      <% if @request.status=='Taken' %>
+         <span class="proposal-label">Request Closed</span>
+      <% elsif @request.status=='Open' %>
+        <% @sp[0].proposals.each do |proposal| %>
+          <% if proposal.request_id != @request.id %>
+            <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'btn btn-info' %>
+          <% elsif proposal.request_id == @request.id %>
+            <%= link_to 'Edit', edit_proposal_path(:id => proposal.id) , :class => 'btn btn-info' %>
+          <% end %>
         <% end %>
       <% end %>
     <% end %>
   <% end %>
 </div>
 
-<% if current_user && current_user.id == @request.user_id && @request.status == 'Taken' %>
-  <div class="response">
-    <div class="response-rows">
-      <div class="response-row">
-        <span class="proposal-label">You have accepted a proposal for this request</span>
-      </div>
-    </div>
-  </div>
-<% elsif current_user &&  current_user.id == @request.user_id %>
+
+<% if current_user &&  current_user.id == @request.user_id %>
   <div class="response">
 
     <div class="response-rows">
       <% @proposals.each do |proposal| %>
-        <div class="response-row" >
-          <span class="proposal-label">Description</span><span><%= proposal.description %></span>
-          <span class="proposal-label">Price: <%=   number_to_currency(proposal.price) %></span>
+        <div class="response-row <%= "proposal_#{proposal.accept}" %>" >
+          <span class="proposal-label">Description: <%= proposal.description %></span>
+          <span class="proposal-label">Price: <%=number_to_currency(proposal.price) %></span>
           <form method='POST' action="/update_accept">
             <input hidden name="proposalid" value="<%= proposal.id %>" />
             <input hidden name="requestid" value="<%= @request.id %>" />
-            <span class="proposal-label">Accept:</span><%= check_box_tag(:span, proposal.accept, false, :class => "accept_#{proposal.accept}") %>
-            <span><%= proposal.accept %></span>
-            <button>Accept</button>
+            <% if !proposal.accept  %>
+              <span class="proposal-label">Accept:</span><%= check_box_tag(:span, proposal.accept, false, :class => "accept_#{proposal.accept}") %>
+              <button>Accept</button>
+            <% else %>
+              <span class="proposal-label">This proposal has been accepted</span>
+            <% end %>
+
           </form>
 
           <div class="request-row-footer">
-            <span class="footer-right"><%= link_to 'Proposal Detail', proposal, :class => 'btn btn-info' %></span>
+            <span class="footer-right"><%= link_to 'Proposal Details', proposal, :class => 'btn btn-info' %></span>
             <% if current_user &&  current_user.userrole == 'service_provider' %>
               <span class="footer-right"><%= link_to 'Edit', edit_proposal_path(proposal) %></span>
               <span class="footer-right"><%= link_to 'Destroy', proposal, method: :delete, data: { confirm: 'Are you sure?' } %></span>
