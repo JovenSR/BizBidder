@@ -55,14 +55,14 @@
   <div class="form-row">
       <%= form.select :category, ['Beauty Services', 'Event Services', 'Farm & Garden Services', 'Food Services'] , :class => 'custom-select'%>
   </div>
-  
+
 
   <div class="field"   >
     <%= hidden_field :user_id, current_user.id %>
   </div>
 
   <div class="field"   >
-    <%= hidden_field :status, :value => 'Open' %>
+    <%= hidden_field :status, @status %>
   </div>
 
   <div style="margin-bottom: 10px;"></div>

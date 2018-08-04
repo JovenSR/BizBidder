@@ -5,15 +5,15 @@ class RequestsController < ApplicationController
   # GET /requests
   # GET /requests.json
   def index
-    if params[:category]  
+    if params[:category]
       @requests = Request.where("category = ?", params[:category])
-    elsif params[:user_id]  
+    elsif params[:user_id]
       @requests = Request.where("user_id = ?", params[:user_id])
     else
       puts "we are in the index page without the params"
       @requests = Request.all
     end
-     
+
   end
 
   def update_accept
@@ -29,9 +29,9 @@ class RequestsController < ApplicationController
   # GET /requests/1
   # GET /requests/1.json
   def show
-    @request = Request.find(params[:id]) 
+    @request = Request.find(params[:id])
     @proposals = Proposal.where(request_id: [@request.id])
-    @sp = current_user.service_providers 
+    @sp = current_user.service_providers
   end
 
   # GET /requests/new
@@ -46,13 +46,14 @@ class RequestsController < ApplicationController
   # POST /requests
   # POST /requests.json
   def create
-    current_user = 1
-     
+    @user = current_user
+    @status = 'Open'
     @request = Request.new(request_params)
-    @request.user_id = current_user
+    @request.user_id = @user.id
 
     respond_to do |format|
       if @request.save
+        Request.where(:id => @request.id).update(:status => 'Open')
         format.html { redirect_to @request, notice: 'Request was successfully created.' }
         format.json { render :show, status: :created, location: @request }
       else
@@ -94,6 +95,6 @@ class RequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
-      params.require(:request).permit(:name, :description, :budget, :proposalDeadline, :eventDate, :address, :city, :province, :category, :status)
+      params.require(:request).permit(:name, :description, :budget, :proposalDeadline, :eventDate, :address, :city, :province, :category, :status, :user_id)
     end
 end
