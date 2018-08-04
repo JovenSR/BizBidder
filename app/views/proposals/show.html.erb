@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<h5><%= @service_provider.companyName%> </h5>
 <p>
   <strong>Description:</strong>
   <%= @proposal.description %>
@@ -7,15 +7,27 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @proposal.price %>
+  <%= number_to_currency(@proposal.price) %>
 </p>
 
 <p>
   <strong>Accept:</strong>
   <%= @proposal.accept %>
 </p>
+
+<p class="contact-group">
+  <fieldset>
+    <legend>Contact Info</legend>
+    <p>Phone: <%= @service_provider.phone%> </p>
+    <p>Email: <%= @service_provider.email%></p>
+    <p>Street: <%= @service_provider.street%></p>
+    <p>City: <%= @service_provider.city%></p>
+  </fieldset>
+</p>
+
 <% if current_user.id == @service_provider.user_id %>
   <%= link_to 'Edit', edit_proposal_path(@proposal) %> |
   <%= link_to 'Back', proposals_path %>
 <% end %>
+<%= link_to 'View Request', request_path(@proposal.request_id), :class => 'btn btn-info' %>
 

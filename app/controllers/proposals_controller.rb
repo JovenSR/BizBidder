@@ -14,7 +14,6 @@ class ProposalsController < ApplicationController
     @proposal = Proposal.find(params[:id])
     @service_provider = ServiceProvider.find(@proposal.service_provider_id)
     
-    
   end
 
   # GET /proposals/new
