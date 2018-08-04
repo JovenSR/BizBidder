@@ -9,14 +9,12 @@
       <div class="service-provider-row">
         <div><h5><%= service_provider.companyName %></h5></div>
         <div><%= service_provider.street %></div>
-        <div><%= service_provider.city %></div>
-        <div><%= service_provider.province %></div>
-        <div><%= service_provider.postalCode %></div>
+         
         <div><%= service_provider.email %></div>
         <div><span>Phone: </span><%= service_provider.phone %></div>
-        <div><span>Type of Business: </span><%= service_provider.serviceType %></div>
+         
         <div><span>Web: </span><%= service_provider.website %></div>
-        <div><span>license: </span><%= service_provider.license %></div>
+         
         <div><span></span><%= service_provider.avatar %></div>
         <div class="service-provider-row-footer">
           <span class="footer-right"><%= link_to 'Details', service_provider_path(service_provider), :class => 'btn btn-info' %></span>

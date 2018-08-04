@@ -15,9 +15,7 @@ class ServiceProvidersController < ApplicationController
 
   # GET /service_providers/1
   # GET /service_providers/1.json
-  def show
-    sp = current_user.service_providers
-    @proposals = sp.proposals
+  def show 
   end
 
   # GET /service_providers/new
