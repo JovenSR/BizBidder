@@ -16,8 +16,9 @@ class ServiceProvidersController < ApplicationController
   end
 
   def my_proposals
-    sp = current_user.service_providers
-    @proposals = sp.proposals
+    sp = current_user.service_providers 
+    @proposals = sp[0].proposals
+    
   end
 
   # GET /service_providers/1
