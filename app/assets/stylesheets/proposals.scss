@@ -8,20 +8,22 @@
 }
 
 .response-rows {
-  display: flex;
-  justify-content: space-between;
-   
-   
+  display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-gap: 20px;
+   grid-row-gap: 1.5rem;
+   width: 100%;
 }
 
 .response-row {
-  margin: 5px;
-  padding-left: 5px;
-  display: flex;
-  flex-direction: column;
-  width: 48%;
-  margin: 5px;
+  padding: 8px;
+  box-shadow: 4px 4px 4px rgb(27, 27, 27);;
   background: lightgray;
   box-shadow: 4px 4px 4px darkgrey;
+}
+legend {
+  width:auto;
+  padding:0 10px;
+  border-bottom:none;
 }
 

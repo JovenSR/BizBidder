@@ -76,11 +76,12 @@
             <input hidden name="proposalid" value="<%= proposal.id %>" />
             <input hidden name="requestid" value="<%= @request.id %>" />
             <span class="proposal-label">Accept:</span><%= check_box_tag(:span, proposal.accept, false, :class => "accept_#{proposal.accept}") %>
-          <button>Submit</button>
+            <span><%= proposal.accept %></span>
+            <button>Accept</button>
           </form>
        
           <div class="request-row-footer">
-            <span class="footer-right"><%= link_to 'Detail', proposal, :class => 'btn btn-info' %></span>
+            <span class="footer-right"><%= link_to 'Proposal Detail', proposal, :class => 'btn btn-info' %></span>
             <% if current_user &&  current_user.userrole == 'service_provider' %>
               <span class="footer-right"><%= link_to 'Edit', edit_proposal_path(proposal) %></span>
               <span class="footer-right"><%= link_to 'Destroy', proposal, method: :delete, data: { confirm: 'Are you sure?' } %></span>
