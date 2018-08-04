@@ -1,65 +1,52 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Companyname:</strong>
-  <%= @service_provider.companyName %>
-</p>
-
-<p>
-  <strong>Street:</strong>
-  <%= @service_provider.street %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @service_provider.city %>
-</p>
-
-<p>
-  <strong>Province:</strong>
-  <%= @service_provider.province %>
-</p>
-
-<p>
-  <strong>Postalcode:</strong>
-  <%= @service_provider.postalCode %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @service_provider.email %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @service_provider.phone %>
-</p>
-
-<p>
-  <strong>Servicetype:</strong>
-  <%= @service_provider.serviceType %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @service_provider.website %>
-</p>
-
-<p>
-  <strong>License:</strong>
-  <%= @service_provider.license %>
-</p>
-
-<p>
-  <strong>Avatar:</strong>
-  <%= @service_provider.avatar %>
-</p>
+<div class="card" style="width:85% ;">
+   
+  <h5> <%= @service_provider.companyName %> </h5>
+  <div class="card-body">
+    <div class="address-group"
+      <div class="group-left">
+        <p>
+          <%= @service_provider.street %>
+        </p>
+        <p>
+          <%= @service_provider.city %>, <%= @service_provider.province %>
+        </p> 
+        <p>
+          <%= @service_provider.postalCode %>
+        </p>
+      </div>
+      <div class="group-right">
+        <p> 
+          <%= @service_provider.email %>
+        </p>
+        <p> 
+          <%= @service_provider.phone %>
+        </p>
+        <p> 
+          <%= @service_provider.website %>
+        </p>
+        <p> 
+          Type of business: <%= @service_provider.serviceType %>
+        </p>
+        <p> 
+           License:<%= @service_provider.license %>
+        </p>
+        <p> 
+          <%= @service_provider.avatar %>
+        </p>
+      </div>
+    </div> 
+  </div>
+</div>
+<div class="service-provider-row-footer">
+    <% if @service_provider.user_id == current_user.id %>
+      <%= link_to 'Edit', edit_service_provider_path(@service_provider), :class => 'btn btn-info' %> 
+    <% end %>
+    <%= link_to 'Back', service_providers_path, :class => 'btn btn-info' %>
+</div>
 
 
-<% if @service_provider.user_id == current_user.id %>
-  <%= link_to 'Edit', edit_service_provider_path(@service_provider), :class => 'btn btn-info' %> |
-<% end %>
-<%= link_to 'Back', service_providers_path, :class => 'btn btn-info' %>
+ 
 
 
 

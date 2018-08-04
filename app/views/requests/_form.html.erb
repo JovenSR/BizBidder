@@ -27,12 +27,12 @@
   </div>
 
   <div class="form-row">
-    <%= form.label 'Proposal Deadline', class:'control-label col-md-2' %>
+    <%= form.label 'Proposal Deadline', class:'control-label col-md-3 col-sm-6' %>
     <%= form.date_field :proposalDeadline, :class => 'form-control' %>
   </div>
 
   <div class="form-row">
-    <%= form.label :eventDate, class:'control-label col-md-2' %>
+    <%= form.label 'Event Date', class:'control-label col-md-2' %>
     <%= form.date_field :eventDate , :class => 'form-control'%>
   </div>
 
@@ -50,23 +50,23 @@
     <%= form.label :province, class:'control-label col-md-2' %>
     <%= form.text_field :province, :value => 'BC', :class => 'form-control' %>
   </div>
-
+  <div style="margin-bottom: 5px;"></div>
+  <div style="margin-bottom: 5px;">Category</div>
   <div class="form-row">
-    <%= form.label :category, class:'control-label col-md-2' %> 
-    <%= form.select :category, ['Beauty Services', 'Event Services', 'Farm & Garden Services'] , :class => 'form-control'%>
+      <%= form.select :category, ['Beauty Services', 'Event Services', 'Farm & Garden Services', 'Food Services'] , :class => 'custom-select'%>
   </div>
+  
 
-  <div class="form-row">
-    <%= form.label :status, class:'control-label col-md-2' %>
-    <%= form.text_field :status, :value => 'Open' %>
+  <div class="field"   >
+    <%= hidden_field :user_id, current_user.id %>
   </div>
 
   <div class="field"   >
-   
-  <%= hidden_field :user_id, 1 %>
-</div>
-
-  <div class="actions ">
-    <%= form.submit nil, :class => 'btn btn-secondary' %>
+    <%= hidden_field :status, :value => 'Open' %>
   </div>
+
+  <div style="margin-bottom: 10px;"></div>
+  <p >
+    <%= form.submit nil, :class => 'btn btn-secondary' %>
+  </p>
 <% end %>
