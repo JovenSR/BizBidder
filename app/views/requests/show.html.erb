@@ -45,7 +45,7 @@
 </div>
 
 <div class="request-row-footer">
-  <% if current_user && current_user.id == @request.user_id %>
+  <% if current_user && current_user.id == @request.user_id && @request.status != 'Taken' %>
     <%= link_to 'Edit', edit_request_path(@request) , :class => 'btn btn-info' %>
   <% end %>
   <%= link_to 'Back', requests_path , :class => 'btn btn-info' %>
@@ -64,7 +64,15 @@
   <% end %>
 </div>
 
-<% if current_user &&  current_user.id == @request.user_id %>
+<% if current_user && current_user.id == @request.user_id && @request.status == 'Taken' %>
+  <div class="response">
+    <div class="response-rows">
+      <div class="response-row">
+        <span class="proposal-label">You have accepted a proposal for this request</span>
+      </div>
+    </div>
+  </div>
+<% elsif current_user &&  current_user.id == @request.user_id %>
   <div class="response">
 
     <div class="response-rows">
@@ -79,7 +87,7 @@
             <span><%= proposal.accept %></span>
             <button>Accept</button>
           </form>
-       
+
           <div class="request-row-footer">
             <span class="footer-right"><%= link_to 'Proposal Detail', proposal, :class => 'btn btn-info' %></span>
             <% if current_user &&  current_user.userrole == 'service_provider' %>
