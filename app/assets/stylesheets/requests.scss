@@ -68,3 +68,31 @@
 
 	100% { background-position: -2122px 0; }
 }
+
+.rectangle{
+  display:block;
+  height:300px;
+  width:350px;
+  background:grey;
+  position:relative;
+  margin-top:100px;
+  color: white;
+}
+
+.circle{
+  position:absolute;
+  height:100px;
+  width:100px;
+  border-radius:50px;
+  border:3px solid white;
+  left:45%;
+  margin-left:-25px;
+  top: -40px;
+  background:grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.request-name {
+  padding-top: 55px;
+}

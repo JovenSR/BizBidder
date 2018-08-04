@@ -5,10 +5,9 @@
 <div class="request-rows">
   <% @requests.each do |request| %>
 
-    <div class="request-row rectangle <%="request_#{request.status}" %>">
+    <div class="request-row <%="request_#{request.status}" %>">
       <div class="request-name"><h5><%= request.name %></h5></div>
-      <div class="request-lines ">
-        <div class="circle">$$</div>
+      <div class="request-lines">
         <div class="request-line"><span>Description: </span><span><%= truncate(request.description, :length => 30 ) %></span></div>
         <div class="request-line"><span>Budget: </span> <span><%= number_to_currency(request.budget) %></span></div>
         <div class="request-line"><span>Proposal deadline: </span><span><%= request.proposalDeadline %></span></div>
