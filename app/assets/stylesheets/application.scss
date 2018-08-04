@@ -5,16 +5,16 @@
 @import "requests";
 @import "proposals";
 @import "service_providers";
- 
+
 
 
 body {
   font-family: 'Fauna One', serif;
-   
+
   padding-top: 70px;
 }
 h1,h5 {
-  font-family: 'Playfair Display', serif; 
+  font-family: 'Playfair Display', serif;
   text-align: center;
 }
 
@@ -22,8 +22,8 @@ h1,h5 {
   position: fixed;
   bottom: 0px;
   height: 40px;
-   
-  width: 100%; 
+
+  width: 100%;
   background: #343A40;
   display: flex;
   align-self: center;
@@ -32,6 +32,13 @@ h1,h5 {
   color: white;
 }
 
+.form-profile {
+  position: absolute;
+  right: 0;
+  color: white;
+}
 
+.loginout-link {
+  color: #fff
+}
 
- 
