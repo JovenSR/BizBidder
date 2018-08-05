@@ -35,10 +35,10 @@
     <%= form.label :avatar %>
     <%= form.text_field :avatar %>
   </div>
- 
+
   <div class="field">
     <%= form.label :userrole %>
-    <%= form.text_field :userrole %>
+    <%= form.select :userrole, ['user', 'service_provider'], :class => 'custom-select' %>
   </div>
 
   <div class="field">
