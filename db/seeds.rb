@@ -5,43 +5,52 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-user1 = User.create!firstName: 'Joven', lastName: 'Rai',  email:'tysonrai111@gmail.com', phone:'778-989-1020', userrole: 'user',  password_digest: User.digest('123')
-user2 = User.create!firstName: 'Khoa', lastName: 'Nguyen',  email:'kn@gmail.com', phone:'778-889-1122', userrole: 'user',  password_digest: User.digest('123')
-user3 = User.create!firstName: 'Hamish', lastName: 'Gray',  email:'hg@gmail.com', phone:'778-981-1547', userrole: 'user',  password_digest: User.digest('123')
-user4 = User.create!firstName: 'Johnathan', lastName: 'Singh',  email:'js@gmail.com', phone:'604-876-1822', userrole: 'user',  password_digest: User.digest('123')
-user5 = User.create!firstName: 'Terry', lastName: 'Parmar',  email:'tp@gmail.com', phone:'778-989-6785', userrole: 'user',  password_digest: User.digest('123')
-user6 = User.create!firstName: 'Jesse', lastName: 'James',  email:'jj@gmail.com', phone:'604-869-1122', userrole: 'user',  password_digest: User.digest('123')
-user7 = User.create!firstName: 'Jennifer', lastName: 'Smith',  email:'js2@gmail.com', phone:'778-909-1122', userrole: 'user',  password_digest: User.digest('123')
-user8 = User.create!firstName: 'Jamal', lastName: 'Davids',  email:'jd2@gmail.com', phone:'778-908-7869', userrole: 'user',  password_digest: User.digest('123')
-user9 = User.create!firstName: 'Stephanie', lastName: 'Forester',  email:'sf@gmail.com', phone:'604-127-1172', userrole: 'user',  password_digest: User.digest('123')
-user10 = User.create!firstName: 'Jashan', lastName: 'Khela',  email:'jk@gmail.com', phone:'778-351 -5555', userrole: 'service_provider',  password_digest: User.digest('123')
-user11 = User.create!firstName: 'Mindy', lastName: 'Tan',  email:'mt@hotmail.com', phone:'604-489-1122', userrole: 'service_provider',  password_digest: User.digest('123')
-user12 = User.create!firstName: 'Don', lastName: 'Johnson',  email:'dj@gmail.com', phone:'555-689-1122', userrole: 'service_provider',  password_digest: User.digest('123')
-user13 = User.create!firstName: 'Carmen', lastName: 'Shin',  email:'cs@gmail.com', phone:'778-987-5122', userrole: 'service_provider', password_digest: User.digest('123')
-user14 = User.create!firstName: 'Caroline', lastName: 'Jin',  email:'cj@gmail.com', phone:'604-987-5122', userrole: 'service_provider', password_digest: User.digest('123')
-user15 = User.create!firstName: 'Leo', lastName: 'Ruan',  email:'lr@gmail.com', phone:'604-678-5112', userrole: 'service_provider', password_digest: User.digest('123')
-user16 = User.create!firstName: 'Steve', lastName: 'Wonders',  email:'sw@gmail.com', phone:'778-461-5122', userrole: 'service_provider', password_digest: User.digest('123')
-user17 = User.create!firstName: 'Lynette', lastName: 'Liu',  email:'ll@gmail.com', phone:'604-987-5442', userrole: 'service_provider', password_digest: User.digest('123')
-user18 = User.create!firstName: 'Mani', lastName: 'Quinto',  email:'mq@gmail.com', phone:'778-144-5122', userrole: 'service_provider', password_digest: User.digest('123')
+user1 = User.create!(firstName: 'Joven', lastName: 'Rai',  email:'user1@gmail.com', phone:'778-989-1020', userrole: 'user',  password_digest: User.digest('123'))
+user2 = User.create!(firstName: 'Khoa', lastName: 'Nguyen',  email:'user2@gmail.com', phone:'778-889-1122', userrole: 'user',  password_digest: User.digest('123'))
+user3 = User.create!(firstName: 'Hamish', lastName: 'Gray',  email:'user3@gmail.com', phone:'778-981-1547', userrole: 'user',  password_digest: User.digest('123'))
+user4 = User.create!(firstName: 'Johnathan', lastName: 'Singh',  email:'user4@gmail.com', phone:'604-876-1822', userrole: 'user',  password_digest: User.digest('123'))
+user5 = User.create!(firstName: 'Terry', lastName: 'Parmar',  email:'user5@gmail.com', phone:'778-989-6785', userrole: 'user',  password_digest: User.digest('123'))
+user6 = User.create!(firstName: 'Jesse', lastName: 'James',  email:'user6@gmail.com', phone:'604-869-1122', userrole: 'user',  password_digest: User.digest('123'))
+user7 = User.create!(firstName: 'Jennifer', lastName: 'Smith',  email:'user7@gmail.com', phone:'778-909-1122', userrole: 'user',  password_digest: User.digest('123'))
+user8 = User.create!(firstName: 'Jamal', lastName: 'Davids',  email:'user8@gmail.com', phone:'778-908-7869', userrole: 'user',  password_digest: User.digest('123'))
+user9 = User.create!(firstName: 'Stephanie', lastName: 'Forester',  email:'user9@gmail.com', phone:'604-127-1172', userrole: 'user',  password_digest: User.digest('123'))
+user10 = User.create!(firstName: 'Bert', lastName: 'Sessame',  email:'user10@gmail.com', phone:'787-134-5322', userrole: 'user', password_digest: User.digest('123'))
+user11 = User.create!(firstName: 'Cookie', lastName: 'Monster',  email:'user11@gmail.com', phone:'798-124-3357', userrole: 'user', password_digest: User.digest('123'))
+user12 = User.create!(firstName: 'Arnold', lastName: 'Whitaker',  email:'user12@gmail.com', phone:'737-187-5322', userrole: 'user', password_digest: User.digest('123'))
+
+user13 = User.create!(firstName: 'Jashan', lastName: 'Khela',  email:'sp1@gmail.com', phone:'778-351 -5555', userrole: 'service_provider',  password_digest: User.digest('123'))
+user14 = User.create!(firstName: 'Mindy', lastName: 'Tan',  email:'sp2@hotmail.com', phone:'604-489-1122', userrole: 'service_provider',  password_digest: User.digest('123'))
+user15 = User.create!(firstName: 'Don', lastName: 'Johnson',  email:'sp3@gmail.com', phone:'555-689-1122', userrole: 'service_provider',  password_digest: User.digest('123'))
+user16 = User.create!(firstName: 'Carmen', lastName: 'Shin',  email:'sp4@gmail.com', phone:'778-987-5122', userrole: 'service_provider', password_digest: User.digest('123'))
+user17 = User.create!(firstName: 'Caroline', lastName: 'Jin',  email:'sp5@gmail.com', phone:'604-987-5122', userrole: 'service_provider', password_digest: User.digest('123'))
+user18 = User.create!(firstName: 'Leo', lastName: 'Ruan',  email:'sp6@gmail.com', phone:'604-678-5112', userrole: 'service_provider', password_digest: User.digest('123'))
+user19 = User.create!(firstName: 'Steve', lastName: 'Wonders',  email:'sp7@gmail.com', phone:'778-461-5122', userrole: 'service_provider', password_digest: User.digest('123'))
+user20 = User.create!(firstName: 'Lynette', lastName: 'Liu',  email:'sp8@gmail.com', phone:'604-987-5442', userrole: 'service_provider', password_digest: User.digest('123'))
+user21 = User.create!(firstName: 'Mani', lastName: 'Quinto',  email:'sp9@gmail.com', phone:'778-144-5122', userrole: 'service_provider', password_digest: User.digest('123'))
+user22 = User.create!(firstName: 'Bill', lastName: 'Gates',  email:'sp10@gmail.com', phone:'604-144-3422', userrole: 'service_provider', password_digest: User.digest('123'))
+user23 = User.create!(firstName: 'Elon', lastName: 'Musk',  email:'sp11@gmail.com', phone:'607-134-6722', userrole: 'service_provider', password_digest: User.digest('123'))
+user24 = User.create!(firstName: 'Albert', lastName: 'Einstein',  email:'sp12@gmail.com', phone:'695-134-3422', userrole: 'service_provider', password_digest: User.digest('123'))
+
+
 
 
 
 request1 = user1.requests.create!({
-  name: 'Makeup Artist needed for wedding',
-  description: 'I have a wedding next year and I need a team of makeup artists to do makeup for 20 ladies. Ideally someone who knows how to do nails and hair as well',
-  budget: '1500',
-  proposalDeadline: '2018/08/11',
+  name: 'Tent needed for wedding',
+  description: '3 big tents needed for wedding pre-parties held at my home',
+  budget: '3000',
+  proposalDeadline: '2018/08/30',
   eventDate: '2018/09/30',
   city: 'Vancouver',
   province: 'BC',
-  category: 'Beauty Services',
+  category: 'Event Services',
   status: 'Open'
 })
 
 request2 = user2.requests.create!({
   name: 'Caterer needed for party',
   description: 'Im hosting a party at my house and need a caterer service to provide Indian food. There will be 85 people at the party.',
-  budget: '3500',
+  budget: '1500',
   proposalDeadline: '2018/10/01',
   eventDate: '2018/10/11',
   city: 'Surrey',
@@ -75,14 +84,14 @@ request4 = user4.requests.create!({
 })
 
 request5 = user5.requests.create!({
-  name: 'Tent needed for wedding',
-  description: '3 big tents needed for wedding pre-parties held at my home',
-  budget: '3000',
-  proposalDeadline: '2018/08/30',
+  name: 'Makeup Artist needed for wedding',
+  description: 'I have a wedding next year and I need a team of makeup artists to do makeup for 20 ladies. Ideally someone who knows how to do nails and hair as well',
+  budget: '1500',
+  proposalDeadline: '2018/08/11',
   eventDate: '2018/09/30',
   city: 'Vancouver',
   province: 'BC',
-  category: 'Event Services',
+  category: 'Beauty Services',
   status: 'Open'
 })
 
@@ -134,25 +143,65 @@ request9 = user9.requests.create!({
   status: 'Open'
 })
 
-service_provider_1 = user10.service_providers.create!({
+request10 = user10.requests.create!({
+  name: 'Clown needed!',
+  description: 'Kids birthday coming up and need a clown. 3 hours max.',
+  budget: '120',
+  proposalDeadline: '2018/08/12',
+  eventDate: '2018/08/22',
+  city: 'Abbotsford',
+  province: 'BC',
+  category: 'Event Services',
+  status: 'Open'
+})
+
+request11 = user11.requests.create!({
+  name: 'Someone to teach me how to cook.',
+  description: 'I want to learn how to cook a huge variety of dishes and the lessons would have to be at my house. Please apply for the request if you know you can teach me in a short amount of time. Maximum 6 lessons.',
+  budget: '700',
+  proposalDeadline: '2018/08/12',
+  eventDate: '2018/08/15',
+  city: 'Port Coquitlam',
+  province: 'BC',
+  category: 'Food Services',
+  status: 'Open'
+})
+
+request12 = user12.requests.create!({
+  name: 'Help with lawn care.',
+  description: 'Got a huge lawn that needs to be taken care. Might take about 3 hours. You need to have your own equipment.',
+  budget: '200',
+  proposalDeadline: '2018/08/11',
+  eventDate: '2018/08/12',
+  city: 'South Surrey',
+  province: 'BC',
+  category: 'Farm & Garden Services',
+  status: 'Open'
+})
+
+
+
+
+service_provider_1 = user13.service_providers.create!({
   companyName: 'Jay Tent Rentals',
   street: '1304 Hornby St',
   city: 'Vancouver',
   province: 'BC',
   postalCode: 'V6M 1L9',
-  email: 'jashanservice@email.ca',
+  email: 'jashanservice@gmail.com',
   phone: '778-565-7855',
   serviceType: 'Event Services',
   website: 'http://www.JayTents.com',
   license: true
 })
+
 service_provider_1.proposals.create!({
   description: 'I would like to take this request. My company has multiple large tents that would be perfect for your event. Contact me for more details.',
   price: '2800',
-  request_id: 5
+  request_id: 1
 })
 
-service_provider_2 = user11.service_providers.create!({
+service_provider_2 = user14.service_providers.create!({
   companyName: 'Mindy Catering Company',
   street: '555 Seymour St',
   city: 'Vancouver',
@@ -164,13 +213,14 @@ service_provider_2 = user11.service_providers.create!({
   website: 'http://www.mindycatering.com',
   license: true
 })
+
 service_provider_2.proposals.create!({
-  description: 'I would like to take this request. My company is specialized in catering food for parties.',
-  price: '3500',
+  description: 'I would like to take this request. My company is specialized in catering food for parties. For that price I can also provide a cake for the end of the night. For more information about our services, visit my webiste.',
+  price: '1500',
   request_id: 2
 })
 
-service_provider_3 = user12.service_providers.create!({
+service_provider_3 = user15.service_providers.create!({
   companyName: 'Don Landscaping',
   street: '456 Granville St',
   city: 'Vancouver',
@@ -189,8 +239,7 @@ service_provider_3.proposals.create!({
   request_id: 3
 })
 
-
-service_provider_4 = user13.service_providers.create!({
+service_provider_4 = user16.service_providers.create!({
   companyName: 'Surrey Salon',
   street: '134 street',
   city: 'Surrey',
@@ -209,7 +258,7 @@ service_provider_4.proposals.create!({
   request_id: 4
 })
 
-service_provider_5 = user14.service_providers.create!({
+service_provider_5 = user17.service_providers.create!({
   companyName: 'SuperBeauty Salon',
   street: '152 st',
   city: 'Surrey',
@@ -225,10 +274,10 @@ service_provider_5 = user14.service_providers.create!({
 service_provider_5.proposals.create!({
   description: 'Hello. We would like to take this request. Check out our website for pictures of our previous work.',
   price: '1500',
-  request_id: 1
+  request_id: 5
 })
 
-service_provider_6 = user15.service_providers.create!({
+service_provider_6 = user18.service_providers.create!({
   companyName: 'Leo Catering Company',
   street: '1800 Robson st',
   city: 'Vancouver',
@@ -247,7 +296,7 @@ service_provider_6.proposals.create!({
   request_id: 6
 })
 
-service_provider_7 = user16.service_providers.create!({
+service_provider_7 = user19.service_providers.create!({
   companyName: 'Garden Design & Floral Services',
   street: '2000 Marine Drive',
   city: 'Vancouver',
@@ -266,7 +315,7 @@ service_provider_7.proposals.create!({
   request_id: 7
 })
 
-service_provider_8 = user17.service_providers.create!({
+service_provider_8 = user20.service_providers.create!({
   companyName: 'Lyn Makeup and Spa',
   street: '1000 Cambie Street',
   city: 'Vancouver',
@@ -285,7 +334,7 @@ service_provider_8.proposals.create!({
   request_id: 8
 })
 
-service_provider_9 = user18.service_providers.create!({
+service_provider_9 = user21.service_providers.create!({
   companyName: 'Mani Decorations',
   street: '1800 160th st',
   city: 'Surrey',
@@ -303,3 +352,64 @@ service_provider_9.proposals.create!({
   price: '2450',
   request_id: 9
 })
+
+
+service_provider_10 = user22.service_providers.create!({
+  companyName: 'Party Services BC',
+  street: '456 Burrard',
+  city: 'Vancouver',
+  province: 'BC',
+  postalCode: 'V9M 1P1',
+  email: 'partyservices@gmail.com',
+  phone: '732-545-7555',
+  serviceType: 'Event Services',
+  website: 'http://www.PartyBC.com',
+  license: true
+})
+
+service_provider_10.proposals.create!({
+  description: 'I have couple guys available for that date and you can look at our website for videos of some of our parties.',
+  price: '150',
+  request_id: 10
+})
+
+service_provider_11 = user23.service_providers.create!({
+  companyName: 'Elon',
+  street: '1123 Great',
+  city: 'Port Coquitlam',
+  province: 'BC',
+  postalCode: 'T8N 3J5',
+  email: 'elon@gmail.com',
+  phone: '776-535-4555',
+  serviceType: 'Food Services',
+  website: 'http://www.instagram.com',
+  license: false
+})
+
+service_provider_11.proposals.create!({
+  description: 'I can teach you within 6 lessons and do it cheaper as well. I have traveled all over the world and have learned how to cook a variety of diverse dishes. You can look at my instagram for pics. Thanks.',
+  price: '600',
+  request_id: 11
+})
+
+service_provider_12 = user24.service_providers.create!({
+  companyName: 'Albert',
+  street: '1134 Howards',
+  city: 'Surrey',
+  province: 'BC',
+  postalCode: 'V8N 6V5',
+  email: 'albert@gmail.com',
+  phone: '778-320-2876',
+  serviceType: 'Farm & Garden Services',
+  website: 'http://www.instagram.com',
+  license: false
+})
+
+service_provider_12.proposals.create!({
+  description: 'Hi, Im looking for side work and I can come in that day and work as long as you need. I can do other work around the house for just 50 dollars more and help out the whole day if needed.',
+  price: '250',
+  request_id: 12
+})
+
+
+
