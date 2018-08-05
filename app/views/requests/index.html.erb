@@ -8,23 +8,24 @@
     <div class="request-row rectangle <%="request_#{request.status}" %>">
       <div class="request-name"><h5><%= request.name %></h5></div>
       <div class="request-lines ">
-        <div class="circle">$$</div>
+        <div class="circle">	<i class="fa fa-dollar"></i></div>
         <div class="request-line"><span>Description: </span><span><%= truncate(request.description, :length => 30 ) %></span></div>
-        <div class="request-line"><span>Budget: </span> <span><%= number_to_currency(request.budget) %></span></div>
-        <div class="request-line"><span>Proposal deadline: </span><span><%= request.proposalDeadline %></span></div>
-      <div class="request-line"><span>Status: </span> <span><%= request.status %></span></div>
+        <div class="request-line budget-group">
+          <span><i class="fa fa-dollar custom" style="font-size:22px"></i>&nbsp;<%= (request.budget) %></span>
+          <span><i class="fa fa-clock-o " style="font-size:24px"></i>&nbsp;  <%= request.proposalDeadline %></span>
+        </div> 
       </div>
       <div class="request-row-footer">
         <em>
           <% if current_user %>
-            <span class="footer-right"><%= link_to 'Details', request , :class => 'btn btn-info' %></span>
+            <span class="footer-right"><%= link_to '...', request , :class => 'btn btn-info' %></span>
           <% else %>
-            <span class="footer-right"><%= link_to 'Details', login_path , :class => 'btn btn-info' %></span>
+            <span class="footer-right" ><%= link_to 'Login', login_path , :class => 'btn btn-info'  %></span>
           <% end %>
 
           <% if current_user && current_user.id == request.user_id %>
             <span class="footer-right"><%= link_to 'Edit', edit_request_path(request)  , :class => 'btn btn-info' %></span>
-            <span class="footer-right"><%= link_to 'Delete', request, method: :delete, data: { confirm: 'Are you sure?' } , :class => 'btn btn-info' %></span>
+             
           <% end %>
         </em>
       </div>

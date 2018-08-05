@@ -73,7 +73,7 @@
 
 .rectangle{
   display:block;
-  height:300px;
+  height:220px;
   width:350px;
   background:grey;
   position:relative;
@@ -97,4 +97,8 @@
 }
 .request-name {
   padding-top: 55px;
+}
+.budget-group {
+  display: flex;
+  justify-content: space-between;
 }
