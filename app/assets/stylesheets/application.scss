@@ -42,10 +42,29 @@ h1,h5 {
 .loginout-link {
   color: #fff
 }
+textarea {
+  margin-bottom: 15px;
+} 
+:focus{outline: none;}
 
+input {
+  position: relative;
+  color: #ccc;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+}
 input {
   border-top: none;
   border-right: none;
   border-left: none;
   border-radius: 0;
+  position: relative;
+  z-index: 1;
+  border-radius: 0;
+  border-width: 0 0 1px;
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+  height: auto;
+  padding: 3px 0 5px;
 }

@@ -11,44 +11,44 @@
     </div>
   <% end %>
 
-  <div class="form-row">
-    <%= form.label :name, class:'control-label col-md-2' %>
-    <%= form.text_field :name , :class => 'form-control' %>
+  <div class="field">
+    <%= form.label :name%>
+    <%= form.text_field :name  %>
   </div>
 
-  <div class="form-row">
-    <%= form.label :description, class:'control-label col-md-2' %>
+  <div class="field">
+    <%= form.label :description %>
     <%= form.text_area :description,hide_label: true, placeholder: "Leave details description", :class => 'form-control' %>
   </div>
 
-  <div class="form-row">
-    <%= form.label :budget, class:'control-label col-md-2' %>
-    <%= form.text_field :budget, :class => 'form-control' %>
+  <div class="field">
+    <%= form.label :budget %>
+    <%= form.text_field :budget %>
   </div>
 
-  <div class="form-row">
-    <%= form.label 'Proposal Deadline', class:'control-label col-md-3 col-sm-6' %>
-    <%= form.date_field :proposalDeadline, :class => 'form-control' %>
+  <div class="field>
+    <%= form.label 'Proposal Deadline' %>
+    <%= form.date_field :proposalDeadline %>
   </div>
 
-  <div class="form-row">
-    <%= form.label 'Event Date', class:'control-label col-md-2' %>
-    <%= form.date_field :eventDate , :class => 'form-control'%>
+  <div class="field">
+    <%= form.label 'Event Date' %>
+    <%= form.date_field :eventDate %>
   </div>
 
-  <div class="form-row">
-    <%= form.label :address, class:'control-label col-md-2' %>
-    <%= form.text_field :address, :class => 'form-control'%>
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address%>
   </div>
 
-  <div class="form-row">
-    <%= form.label :city , class:'control-label col-md-2'%>
-    <%= form.text_field :city, :class => 'form-control' %>
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city%>
   </div>
 
-  <div class="form-row">
-    <%= form.label :province, class:'control-label col-md-2' %>
-    <%= form.text_field :province, :value => 'BC', :class => 'form-control' %>
+  <div class="field">
+    <%= form.label :province %>
+    <%= form.text_field :province, :value => 'BC' %>
   </div>
   <div style="margin-bottom: 5px;"></div>
   <div style="margin-bottom: 5px;">Category</div>
