@@ -1,11 +1,12 @@
 <!-- app/views/sessions/new.html.erb -->
+<div class="login-container">
+<h2>Login</h2>
+<div></div>
+<%= form_tag '/login', {class: 'login-form'} do %>
 
-<h1>Login</h1>
-
-<%= form_tag '/login' do %>
-
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
+  <div class="login-field"><span class="form-label">Email:</span> <%= text_field_tag :email %> </div> 
+  <div class="login-field"><span class="form-label">Password:</span> <%= password_field_tag :password %> </div>
+  <div class="login-field"><%= submit_tag "Login" ,:class => 'login-btn' %></div>
 
 <% end %>
+</div>
