@@ -5,6 +5,7 @@ class RequestsController < ApplicationController
   # GET /requests
   # GET /requests.json
   def index
+
     if params[:category]
       @requests = Request.where("category = ?", params[:category])
     elsif params[:user_id]
@@ -31,8 +32,13 @@ class RequestsController < ApplicationController
   # GET /requests/1.json
   def show
     @request = Request.find(params[:id])
-    @proposals = Proposal.where(request_id: [@request.id])
     @sp = current_user.service_providers
+    if current_user.userrole == 'service_provider'
+       @proposals = Proposal.where(request_id: [@request.id], service_provider_id: @sp[0].id)
+    elsif current_user.userrole == 'user'
+      @proposals = Proposal.where(request_id: [@request.id])
+    end
+
   end
 
   # GET /requests/new

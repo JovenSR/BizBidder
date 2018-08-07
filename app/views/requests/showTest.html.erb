@@ -1,0 +1,46 @@
+
+
+<div class="request-row-footer">
+  <%= link_to 'Back', requests_path , :class => 'btn btn-info' %>
+
+  <% if current_user %>
+    <% if current_user.id == @request.user_id && @request.status != 'Taken' %>
+      <%= link_to 'Edit', edit_request_path(@request) , :class => 'btn btn-info' %>
+    <% end %>
+    <% if current_user.userrole =='service_provider' %>
+      <% if @request.status=='Taken' %>
+         <span class="proposal-label">Request Closed</span>
+      <% elsif @request.status=='Open' %>
+        <% if @sp[0].proposals.length == 0 %>
+          <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'btn btn-info' %>
+        <% end %>
+        <% @proposals.each do |proposal| %>
+          <% if proposal.service_provider_id != @current_sp.id %>
+            <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'btn btn-info' %><br />
+          <% elsif proposal.service_provider_id == @current_sp.id %>
+            <%= link_to 'Edit', edit_proposal_path(:id => proposal.id) , :class => 'btn btn-info' %><br />
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+
+
+    @current_sp = ServiceProvider.where("user_id = ? ", current_user.id)
+
+
+      def show
+    @request = Request.find(params[:id])
+    @sp = current_user.service_providers
+    if current_user.userrole == 'service_provider'
+       @proposals = Proposal.where(request_id: [@request.id], service_provider_id: @current_sp.id)
+    elsif current_user.userrole == 'user'
+      @proposals = Proposal.where(request_id: [@request.id])
+    end
+
+  end
+
+
+
+    @prop = Proposal.where(request_id: proposal_params[:request_id], service_provider_id: proposal_params[:service_provider_id])
