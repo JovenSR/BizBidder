@@ -47,27 +47,31 @@
 <div class="request-row-footer">
   <%= link_to 'Back', requests_path , :class => 'btn btn-info' %>
 
-  <% if current_user %>
-    <% if current_user.id == @request.user_id && @request.status != 'Taken' %>
-      <%= link_to 'Edit', edit_request_path(@request) , :class => 'btn btn-info' %>
-    <% end %>
-    <% if current_user.userrole =='service_provider' %>
-      <% if @request.status=='Taken' %>
-         <span class="proposal-label">Request Closed</span>
-      <% elsif @request.status=='Open' %>
-        <% if @sp[0].proposals.length == 0 %>
-          <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'request-btn' %>
-        <% end %>
-        <% @sp[0].proposals.each do |proposal| %>
-          <% if proposal.request_id != @request.id %>
-            <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'request-btn' %>
-          <% elsif proposal.request_id == @request.id %>
-            <%= link_to 'Edit', edit_proposal_path(:id => proposal.id) , :class => 'request-btn' %>
+  <% if current_user.id == @request.user_id && @request.status != 'Taken' %>
+    <%= link_to 'Edit', edit_request_path(@request) , :class => 'btn btn-info' %>
+  <% end %>
+
+
+
+  <% if current_user.userrole =='service_provider' %>
+    <% if @request.status=='Taken' %>
+      <span class="proposal-label">Request Closed</span>
+    <% elsif @request.status=='Open' %>
+      <% if @proposals.count == 0 %>
+        <%= link_to "Response", new_proposal_path(:id => @request.id) , :class => 'btn btn-info' %><br />
+      <% else %>
+        <% @proposals.each do |proposal| %>
+          <% if proposal.service_provider_id != @sp[0].id %>
+            <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'btn btn-info' %><br />
+          <% elsif proposal.service_provider_id == @sp[0].id %>
+            <%= link_to 'Edit', edit_proposal_path(:id => proposal.id) , :class => 'btn btn-info' %><br />
           <% end %>
         <% end %>
       <% end %>
+
     <% end %>
   <% end %>
+
 </div>
 
 
