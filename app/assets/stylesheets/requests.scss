@@ -1,7 +1,7 @@
 // Place all the styles related to the requests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
- 
+
 
  .request-rows {
    display: grid;
@@ -18,10 +18,9 @@
   position: relative;
 }
 .request-row:hover {
-  background-color:  #decbe4;
+  background-color: #476F8B;
   color:white
 }
-
 
 
 .request_Taken {
@@ -76,12 +75,12 @@
 
 .circle{
   position:absolute;
-  height:100px;
-  width:100px;
-  border-radius:50px;
+  height:140px;
+  width:140px;
+  border-radius:50%;
   border:3px solid white;
   left:45%;
-  margin-left:-25px;
+  margin-left:-40px;
   top: -40px;
   background:grey;
   display: flex;
@@ -89,7 +88,7 @@
   align-items: center;
 }
 .request-name {
-  padding-top: 55px;
+  padding-top: 85px;
 }
 .budget-group {
   display: flex;
