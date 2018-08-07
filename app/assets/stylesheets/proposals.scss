@@ -35,3 +35,67 @@ legend {
   background-color: red;
 
 }
+.view-request-btn{
+  margin-top: 25px;
+  border: 1px solid grey;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 150px;
+  background: #ffb400;
+  color: #2d4059;
+  box-shadow: 4px 4px 4px rgb(27, 27, 27);
+  border-radius: 5px;
+}
+
+.contact-group-proposal  {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 150px;
+  background-color: #ea5455;
+  color:white;
+  padding:10px; 
+  box-shadow: 4px 4px 4px rgb(105, 101, 101);
+}
+
+.company-name-div-container{
+  width: 33%;
+}
+.proposal-desc-budget-group {
+  background-color: #ea5455;
+}
+.group-proposal-description {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 150px;
+  background-color: #ea5455;
+  color:white;
+  padding:10px; 
+  box-shadow: 4px 4px 4px rgb(105, 101, 101);
+}
+
+.group-proposal-price, .group-proposal-accept {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 70px;
+  background-color: #ea5455;
+  color:white;
+  padding:10px; 
+  box-shadow: 4px 4px 4px rgb(105, 101, 101);
+}
+.proposal-name {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 70px;
+  background-color: #ea5455;
+  color:white;
+  padding:10px; 
+  box-shadow: 4px 4px 4px rgb(105, 101, 101);
+}

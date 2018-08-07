@@ -1,33 +1,38 @@
 <p id="notice"><%= notice %></p>
-<h5><%= @service_provider.companyName%> </h5>
-<p>
-  <strong>Description:</strong>
-  <%= @proposal.description %>
-</p>
+<div class="company-name-div-container" >
+  <div class="company-name-div">
+    <h5 class="proposal-name"><span ><%= @service_provider.companyName%> Proposal</span></h5>
+  </div>
+   
+    <div class="group-proposal-description">
+      <%= @proposal.description %>
+    </div>
 
-<p>
-  <strong>Price:</strong>
-  <%= number_to_currency(@proposal.price) %>
-</p>
+    <div class="group-proposal-price">
+      <strong>Bid Price</strong>
+      <%= number_to_currency(@proposal.price) %>
+    </div>
+    <div class="group-proposal-accept">
+      <strong>Accept:</strong>
+      <%= @proposal.accept %>
+    </div>
 
-<p>
-  <strong>Accept:</strong>
-  <%= @proposal.accept %>
-</p>
+    <div class="contact-group-proposal">
+      <p>Phone: <%= @service_provider.phone%> </p>
+      <p>Email: <%= @service_provider.email%></p>
+      <p>Street: <%= @service_provider.street%></p>
+      <p>City: <%= @service_provider.city%></p>
+    </div>
+   
+</div>
+ 
+ 
 
-<p class="contact-group">
-  <fieldset>
-    <legend>Contact Info</legend>
-    <p>Phone: <%= @service_provider.phone%> </p>
-    <p>Email: <%= @service_provider.email%></p>
-    <p>Street: <%= @service_provider.street%></p>
-    <p>City: <%= @service_provider.city%></p>
-  </fieldset>
-</p>
+
 
 <% if current_user.id == @service_provider.user_id %>
   <%= link_to 'Edit', edit_proposal_path(@proposal) %> |
   <%= link_to 'Back', proposals_path %>
 <% end %>
-<%= link_to 'View Request', request_path(@proposal.request_id), :class => 'btn btn-info' %>
+<%= link_to 'View Request', request_path(@proposal.request_id), :class => 'view-request-btn' %>
 

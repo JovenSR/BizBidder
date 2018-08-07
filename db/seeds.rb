@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+ 
 user1 = User.create!(firstName: 'Joven', lastName: 'Rai',  email:'user1@gmail.com', phone:'778-989-1020', userrole: 'user',  password_digest: User.digest('123'))
 user2 = User.create!(firstName: 'Khoa', lastName: 'Nguyen',  email:'user2@gmail.com', phone:'778-889-1122', userrole: 'user',  password_digest: User.digest('123'))
 user3 = User.create!(firstName: 'Hamish', lastName: 'Gray',  email:'user3@gmail.com', phone:'778-981-1547', userrole: 'user',  password_digest: User.digest('123'))
@@ -411,5 +412,5 @@ service_provider_12.proposals.create!({
   request_id: 12
 })
 
-
+ 
 
