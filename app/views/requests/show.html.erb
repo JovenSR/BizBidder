@@ -14,17 +14,18 @@
         <strong>Budget:</strong>
         <%= number_to_currency(@request.budget) %>
       </span>
-      <span>
-        <strong>Event date:</strong>
-        <%= @request.eventDate %>
-      </span>
+ 
     </div>
   </div>
-
   <div>
-    <strong>Response before:</strong>
+    <strong>Reply before:</strong>
     <%= @request.proposalDeadline %>
   </div>
+  <div>
+    <strong>Event date:</strong>
+    <%= @request.eventDate %>
+  </div>
+ 
 
     <div>
       <strong>City:</strong>
