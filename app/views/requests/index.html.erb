@@ -6,7 +6,10 @@
 <div class="request-rows">
   <% @requests.each do |request| %>
 
+
+    
     <div class="request-row rectangle <%="request_#{request.status}" %>">
+    <%= link_to request do %>
       <div class="request-name"><h5><%= request.name %></h5></div>
       <div class="request-lines ">
         <div class="circle">	<i class="fa fa-dollar"></i></div>
@@ -31,6 +34,7 @@
         </em>
       </div>
     </div>
+    <% end %>
   <% end %>
 
 </div>
