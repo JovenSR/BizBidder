@@ -22,9 +22,9 @@
       <div class="request-row-footer">
         <em>
           <% if current_user %>
-            <span class="footer-right"><%= link_to '...', request , :class => 'btn btn-info' %></span>
+            <span class="footer-right"><%= link_to '', request , :class => 'test' %></span>
           <% else %>
-            <span class="footer-right" ><%= link_to 'Login', login_path , :class => 'btn btn-info'  %></span>
+            <span class="footer-right" ><%= link_to 'login', login_path , :class => 'btn btn-info'  %></span>
           <% end %>
 
           <% if current_user && current_user.id == request.user_id %>

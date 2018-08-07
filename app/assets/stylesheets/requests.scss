@@ -18,7 +18,7 @@
   position: relative;
 }
 .request-row:hover {
-  background-color:  #decbe4;
+  background-color:  #476f8b;
   color:white
 }
 
@@ -127,4 +127,11 @@
 }
 .web-url {
   color:white;
+}
+.request-line-budget {
+  position: absolute;
+  bottom: 5px;
+}
+.request-line {
+
 }
