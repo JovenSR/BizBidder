@@ -33,8 +33,6 @@ class ProposalsController < ApplicationController
 
     @proposal = Proposal.new(proposal_params)
 
-
-
     respond_to do |format|
       if @proposal.save
         format.html { redirect_to @proposal, notice: 'Proposal was successfully created.' }

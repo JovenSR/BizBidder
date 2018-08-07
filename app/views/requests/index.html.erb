@@ -2,6 +2,7 @@
 
 <h1>Requests</h1>
 
+
 <div class="request-rows">
   <% @requests.each do |request| %>
 
@@ -13,7 +14,7 @@
         <div class="request-line budget-group">
           <span><i class="fa fa-dollar custom" style="font-size:22px"></i>&nbsp;<%= (request.budget) %></span>
           <span><i class="fa fa-clock-o " style="font-size:24px"></i>&nbsp;  <%= request.proposalDeadline %></span>
-        </div> 
+        </div>
       </div>
       <div class="request-row-footer">
         <em>
@@ -25,7 +26,7 @@
 
           <% if current_user && current_user.id == request.user_id %>
             <span class="footer-right"><%= link_to 'Edit', edit_request_path(request)  , :class => 'btn btn-info' %></span>
-             
+
           <% end %>
         </em>
       </div>
