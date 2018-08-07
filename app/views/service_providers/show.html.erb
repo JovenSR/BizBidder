@@ -1,33 +1,35 @@
-<div class="service-provider-profile">
-  <div> 
-    <h5 style="color: #85bdf8;font-weight:bold;"><%= @service_provider.companyName %></h5> 
-  </div>
-  <div class="heading-group">
-    <p> 
-      <%= @service_provider.email %>
-    </p>
-    <p> 
-      <%= @service_provider.phone %>
-    </p>
-    <p> 
-      <%= link_to 'home page', @service_provider.website %>
-    </p>
-  </div>
-  <div class="contact-group">
-    <p>
-          <%= @service_provider.street %>
-    </p>
-    <p>
-          <%= @service_provider.city %>, <%= @service_provider.province %>
-    </p>
-    <p>
-          <%= @service_provider.postalCode %>
-    </p> 
-  </div>
-  <div class="link-footer">
-    <% if @service_provider.user_id == current_user.id %>
-      <%= link_to 'Edit', edit_service_provider_path(@service_provider), :class => 'btn btn-info' %> 
-    <% end %>
-    <%= link_to 'Back', service_providers_path, :class => 'btn btn-info' %>
+<div class="outer">
+  <div class="service-provider-profile">
+    <div class="company-name-div"> 
+      <h5 class="company-name"><span class="company-name"><%= @service_provider.companyName %></span></h5> 
+    </div>
+    <div class="heading-group">
+      <p> 
+        <span><i class="fa fa-envelope" aria-hidden="true"></i>  </span><%= @service_provider.email %>
+      </p>
+      <p> 
+        <span><i class="fa fa-phone" aria-hidden="true"></i></span>  <%= @service_provider.phone %>
+      </p>
+      <p> 
+        <span><i class="fa fa-link" aria-hidden="true"></i></span>  <%= link_to "#{@service_provider.website}", @service_provider.website, class: 'web-url' %>
+      </p>
+    </div>
+    <div class="contact-group">
+      <p>
+        <%= @service_provider.street %>
+      </p>
+      <p>
+        <%= @service_provider.city %>, <%= @service_provider.province %>
+      </p>
+      <p>
+        <%= @service_provider.postalCode %>
+      </p> 
+    </div>
+    <div class="link-footer">
+      <% if @service_provider.user_id == current_user.id %>
+        <%= link_to 'Edit', edit_service_provider_path(@service_provider), :class => 'footer-btn' %> 
+      <% end %>
+      <%= link_to 'Back', service_providers_path, :class => 'footer-btn' %>
+    </div>
   </div>
 </div>

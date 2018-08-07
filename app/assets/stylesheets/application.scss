@@ -5,7 +5,10 @@
 @import "requests";
 @import "proposals";
 @import "service_providers";
+@import 'font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900');
 
+ 
 
 
 body {
@@ -69,12 +72,13 @@ input {
   padding: 3px 0 5px;
 }
 .login-btn {
-  border: 1px solid red;
+  margin-top: 15px; 
   width: 100px;
   border-radius: 5px;
-  box-shadow: 1px 1px 1px rgb(238, 103, 103);
-   
-  
+  box-shadow: 2px 2px 2px rgba(156, 39, 176, 0.7);
+  background: purple;
+  color: white;
+  left: 35%; 
 }
 .login-field {
   margin-bottom: 10px;
@@ -90,6 +94,18 @@ input {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 40%;
+  top: 37%;
   left: 40%;
 }
+h2 {
+  background-color: purple;
+  text-align: center;
+  color: white; 
+  width: 260px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(156, 39, 176, 0.7);
+  margin-bottom: 20px;
+}
+ 
+
+

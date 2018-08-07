@@ -56,13 +56,13 @@
          <span class="proposal-label">Request Closed</span>
       <% elsif @request.status=='Open' %>
         <% if @sp[0].proposals.length == 0 %>
-          <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'btn btn-info' %>
+          <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'request-btn' %>
         <% end %>
         <% @sp[0].proposals.each do |proposal| %>
           <% if proposal.request_id != @request.id %>
-            <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'btn btn-info' %>
+            <%= link_to 'Response', new_proposal_path(:id => @request.id) , :class => 'request-btn' %>
           <% elsif proposal.request_id == @request.id %>
-            <%= link_to 'Edit', edit_proposal_path(:id => proposal.id) , :class => 'btn btn-info' %>
+            <%= link_to 'Edit', edit_proposal_path(:id => proposal.id) , :class => 'request-btn' %>
           <% end %>
         <% end %>
       <% end %>

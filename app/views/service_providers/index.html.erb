@@ -1,29 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Service Providers</h1>
-
-
-
+<h1>Service Providers</h1> 
   <div class="service-provider-rows">
     <% @service_providers.each do |service_provider| %>
       <div class="service-provider-row">
         <div><h5><%= service_provider.companyName %></h5></div>
-        <div><%= service_provider.street %></div>
-
-        <div><%= service_provider.email %></div>
-        <div><span>Phone: </span><%= service_provider.phone %></div>
-
-        <div><span>Web: </span><%= service_provider.website %></div>
-
-        <div><span></span><%= service_provider.avatar %></div>
+        <div class="street-group">
+           <div><span><i class="fa fa-address-card" aria-hidden="true"></i></span> <%= service_provider.street %></div> 
+           <div><span><i class="fa fa-envelope" aria-hidden="true"></i></span> <%= service_provider.email %></div>
+           <div><span><i class="fa fa-phone" aria-hidden="true"></i></span> <%= service_provider.phone %></div> 
+           <div><span><i class="fa fa-link" aria-hidden="true"></i></span> <%= service_provider.website %></div> 
+           <div><span></span><%= service_provider.avatar %></div>
+        </div>
         <div class="service-provider-row-footer">
           <span class="footer-right"><%= link_to 'Details', service_provider_path(service_provider.id), :class => 'btn btn-info' %></span>
         </div>
       </div>
     <% end %>
-  </div>
-
-
+  </div> 
 <br>
  
 <%= link_to 'New Service Provider', new_service_provider_path, :class => 'btn btn-info' %>

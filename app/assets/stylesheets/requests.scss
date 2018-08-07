@@ -73,7 +73,7 @@
 
 .rectangle{
   display:block;
-  height:220px;
+  height:240px;
   width:350px;
   background:grey;
   position:relative;
@@ -101,4 +101,37 @@
 .budget-group {
   display: flex;
   justify-content: space-between;
+}
+.street-group {
+  padding-left: 10px;
+  line-height: 30px;
+}
+.company-name-div {
+  width: 100%;
+}
+.company-name-div{
+  width: 100%;
+}
+.company-name {
+  display: inline-block;
+  background: #85bdf8;
+  line-height: 60px;
+  width: 100%;
+  color: white;
+  box-shadow: 4px 4px 4px rgb(27, 27, 27);
+}
+.footer-btn {
+  margin-right: 5px;
+  border: 1px solid grey;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 50px;
+  background: #ffb400;
+  color: #2d4059;
+  box-shadow: 4px 4px 4px rgb(27, 27, 27);
+  border-radius: 5px;
+}
+.web-url {
+  color:white;
 }
