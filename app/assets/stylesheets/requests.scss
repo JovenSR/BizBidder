@@ -1,14 +1,7 @@
 // Place all the styles related to the requests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
- .status_Open {
-   color: yellow;
-   background: blue;
- }
- .status_Taken {
-   color: white;
-   background: green;
- }
+ 
 
  .request-rows {
    display: grid;
@@ -32,7 +25,7 @@
 
 
 .request_Taken {
-  background: #4f6457;
+  background: #71808b;
   color: white;
 }
 

@@ -5,17 +5,12 @@
 </div>
 <div class="request-container">
   <div>
-    <span>
-      <strong>Description:</strong>
-      <%= @request.description %>
-    </span>
-    <div>
-      <span>
-        <strong>Budget:</strong>
-        <%= number_to_currency(@request.budget) %>
-      </span>
- 
-    </div>
+    <strong>Description:</strong>
+    <%= @request.description %>
+  </div>
+  <div>
+    <strong>Budget:</strong>
+    <%= number_to_currency(@request.budget) %>
   </div>
   <div>
     <strong>Reply before:</strong>
@@ -32,24 +27,15 @@
       <%= @request.city %>,
       <strong>Province:</strong>
       <%= @request.province %>
-    </div>
-
-    <div>
-      <strong>Category:</strong>
-      <%= @request.category %>
-    </div>
-
-    <div>
-      <strong>Status:</strong>
-      <%= @request.status %>
-    </div>
+    </div> 
+ 
 </div>
 
 <div class="request-row-footer">
-  <%= link_to 'Back', requests_path , :class => 'btn btn-info' %>
+  <%= link_to 'Back', requests_path , :class => 'footer-btn' %>
 
   <% if current_user.id == @request.user_id && @request.status != 'Taken' %>
-    <%= link_to 'Edit', edit_request_path(@request) , :class => 'btn btn-info' %>
+    <%= link_to 'Edit', edit_request_path(@request) , :class => 'footer-btn' %>
   <% end %>
 
 
@@ -81,7 +67,7 @@
 
     <div class="response-rows">
       <% @proposals.each do |proposal| %>
-        <div class="response-row <%= "proposal_#{proposal.accept}" %>" >
+        <div class="request-response-row <%= "proposal_#{proposal.accept}" %>" >
           <span class="proposal-label">Description: <%= proposal.description %></span>
           <span class="proposal-label">Price: <%=number_to_currency(proposal.price) %></span>
           <form method='POST' action="/update_accept">
@@ -97,7 +83,7 @@
           </form>
 
           <div class="request-row-footer">
-            <span class="footer-right"><%= link_to 'Proposal Details', proposal, :class => 'btn btn-info' %></span>
+            <span class="footer-right"><%= link_to 'Proposal Details', proposal, :class => 'view-request-btn' %></span>
             <% if current_user &&  current_user.userrole == 'service_provider' %>
               <span class="footer-right"><%= link_to 'Edit', edit_proposal_path(proposal) %></span>
               <span class="footer-right"><%= link_to 'Destroy', proposal, method: :delete, data: { confirm: 'Are you sure?' } %></span>
