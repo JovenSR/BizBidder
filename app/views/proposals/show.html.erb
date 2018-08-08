@@ -12,11 +12,7 @@
       <strong>Bid Price</strong>
       <%= number_to_currency(@proposal.price) %>
     </div>
-    <div class="group-proposal-accept">
-      <strong>Accept:</strong>
-      <%= @proposal.accept %>
-    </div>
-
+ 
     <div class="contact-group-proposal">
       <p>Phone: <%= @service_provider.phone%> </p>
       <p>Email: <%= @service_provider.email%></p>
@@ -26,13 +22,5 @@
    
 </div>
  
- 
-
-
-
-<% if current_user.id == @service_provider.user_id %>
-  <%= link_to 'Edit', edit_proposal_path(@proposal) %> |
-  <%= link_to 'Back', proposals_path %>
-<% end %>
 <%= link_to 'View Request', request_path(@proposal.request_id), :class => 'view-request-btn' %>
 
