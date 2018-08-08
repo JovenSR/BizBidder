@@ -10,7 +10,15 @@
 
     <div class="request-row rectangle <%="request_#{request.status}" %>">
     <%= link_to request do  %>
-      <div class="circle">	<i class="fa fa-dollar"></i></div>
+      <% if request.category == 'Food Services' %>
+        <div class="circle">	<i class="material-icons" style="font-size:30px"> restaurant</i></div>
+      <% elsif request.category == 'Beauty Services' %>
+        <div class="circle"><i class="material-icons" style="font-size:30px">spa</i></div>
+      <% elsif request.category == 'Event Services' %>
+        <div class="circle"><i class="material-icons" style="font-size:30px">event_note</i></div>
+      <% elsif request.category == 'Farm & Garden Services' %>
+        <div class="circle"><i class="material-icons" style="font-size:30px">nature_people</i></div>
+      <% end %>
       <div class="request-name"><h5><%= request.name %></h5></div>
       <div class="request-lines ">
 

@@ -3,9 +3,9 @@
 <h1>Proposals</h1>  
 <div class="my-proposals">
   <% @proposals.each do |proposal| %>
-    <div class="my-proposal">
-      <div><%= proposal.description %></div>
-      <div>Bid price: <%= number_to_currency(proposal.price) %></div> 
+    <div class="my-proposal"> 
+      <div><span><%= truncate(proposal.description, :length => 80 ) %></div>
+      <div class="bid-price">Bid price: <%= number_to_currency(proposal.price) %></div> 
       <div class="service-provider-row-footer">
         <span><%= link_to 'Show', proposal, :class => 'sp-footer-btn' %></span>
         <span><%= link_to 'Edit', edit_proposal_path(proposal), :class => 'sp-footer-btn' %></span>
