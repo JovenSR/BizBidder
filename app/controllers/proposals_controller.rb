@@ -32,6 +32,7 @@ class ProposalsController < ApplicationController
   def create
 
     @proposal = Proposal.new(proposal_params)
+    @proposal.accept = false;
 
     respond_to do |format|
       if @proposal.save
