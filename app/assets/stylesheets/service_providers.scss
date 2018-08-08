@@ -8,7 +8,7 @@
   grid-row-gap: 1.5rem;
   width: 100%; 
 }
-.service-provider-row { 
+.service-provider-row, .my-proposal { 
   background:grey;
   color: white;
   padding: 8px;
@@ -101,6 +101,9 @@ img {
 }
 .sp-footer-btn-new{
   width: 100px;
+}
+.my-proposal{
+
 }
 
 
