@@ -72,6 +72,7 @@
           <div class="proposal-label"><%= truncate(proposal.description, :length => 37 ) %></div>
           <div class="proposal-label">Bid Price: <%=number_to_currency(proposal.price) %></div>
           <form method='POST' action="/update_accept">
+
             <input hidden name="proposalid" value="<%= proposal.id %>" />
             <input hidden name="requestid" value="<%= @request.id %>" />
             <% if !proposal.accept  %>
