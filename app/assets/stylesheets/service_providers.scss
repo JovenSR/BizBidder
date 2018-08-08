@@ -86,6 +86,22 @@ img {
   justify-content: center;
   border: 1px solid #2d4059;
 }
+.sp-footer-btn{
+  margin-top: 5px;
+  margin-right: 5px;
+  border: 1px solid grey;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 70px;
+  background: #ffb400;
+  color: #2d4059;
+  box-shadow: 4px 4px 4px rgb(27, 27, 27);
+  border-radius: 5px;
+}
+.sp-footer-btn-new{
+  width: 100px;
+}
 
 
  

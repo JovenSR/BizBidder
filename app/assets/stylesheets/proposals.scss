@@ -114,6 +114,24 @@ legend {
 .request-container{
   width: 90%;
   background: grey;
-  height: 210px;
+  height: 190px;
   padding: 5px;
+}
+
+.accept {
+  display:none;
+}
+
+.proposal-footer-btn{
+  margin-top: 5px;
+  margin-right: 5px;
+  border: 1px solid grey;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 70px;
+  background: #ffb400;
+  color: #2d4059;
+  box-shadow: 4px 4px 4px rgb(27, 27, 27);
+  border-radius: 5px;
 }

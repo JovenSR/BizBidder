@@ -21,13 +21,13 @@
     <%= form.text_field :price %>
   </div>
 
-
   <div class="field accept">
     <%= form.label :accept %>
     <%= form.check_box :accept, :value => false %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+
+    <%= form.submit 'Update', :class => 'proposal-footer-btn' %>
   </div>
 <% end %>

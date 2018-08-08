@@ -13,11 +13,10 @@
            <div><span></span><%= service_provider.avatar %></div>
         </div>
         <div class="service-provider-row-footer">
-          <span class="footer-right"><%= link_to 'Details', service_provider_path(service_provider.id), :class => 'btn btn-info' %></span>
+          <span class="footer-right"><%= link_to 'Details', service_provider_path(service_provider.id), :class => 'sp-footer-btn' %></span>
         </div>
       </div>
     <% end %>
   </div> 
 <br>
  
-<%= link_to 'New Service Provider', new_service_provider_path, :class => 'btn btn-info' %>
