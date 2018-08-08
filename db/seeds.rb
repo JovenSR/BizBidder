@@ -180,11 +180,58 @@ request12 = user12.requests.create!({
   status: 'Open'
 })
 
+request13 = user1.requests.create!({
+  name: 'Catering for graduation',
+  description: 'My daughter is graduating from high school and will have 60 of her closest friends and family over to celebrate. We are looking for food catered towards 17 and 18 year olds.',
+  budget: '1500',
+  proposalDeadline: '2018/08/15',
+  eventDate: '2018/09/05',
+  city: 'Vancouver',
+  province: 'BC',
+  category: 'Food Services',
+  status: 'Open'
+})
+
+request14 = user1.requests.create!({
+  name: 'Prom makeup services needed',
+  description: 'My daughter wants to get a golden smokey eye for her prom event with fake eyelashes and full coverage makeup. Her two friends will be joining her but are unusure of their makeup requirements. Please send pictures of previous work.',
+  budget: '400',
+  proposalDeadline: '2018/08/15',
+  eventDate: '2018/09/05',
+  city: 'Vancouver',
+  province: 'BC',
+  category: 'Beauty Services',
+  status: 'Open'
+})
+
+request15 = user1.requests.create!({
+  name: 'DJ needed for charity event',
+  description: 'I am organizing a charity event to build a school in Tanazania and I am looking for a cost effective DJ whos name will also be shown as a sponser',
+  budget: '300',
+  proposalDeadline: '2018/08/20',
+  eventDate: '2018/09/10',
+  city: 'Delta',
+  province: 'BC',
+  category: 'Event Services',
+  status: 'Open'
+})
+
+request16 = user1.requests.create!({
+  name: 'Lawn Mowing needed',
+  description: 'I have a 2 acre backyard that requires lawn mowing and weed removal.',
+  budget: '200',
+  proposalDeadline: '2018/08/13',
+  eventDate: '2018/09/15',
+  city: 'Vancouver',
+  province: 'BC',
+  category: 'Farm & Garden Services',
+  status: 'Open'
+})
 
 
 
 service_provider_1 = user13.service_providers.create!({
-  companyName: 'Jay Tent Rentals',
+  companyName: 'Jay Tent & Events Services',
   street: '1304 Hornby St',
   city: 'Vancouver',
   province: 'BC',
@@ -200,6 +247,27 @@ service_provider_1.proposals.create!({
   description: 'I would like to take this request. My company has multiple large tents that would be perfect for your event. Contact me for more details.',
   price: '2800',
   request_id: 1,
+  accept: false
+})
+
+service_provider_1.proposals.create!({
+  description: 'Hi, I DJ for events and I can give you a good price for 4 hours of service.',
+  price: '250',
+  request_id: 15,
+  accept: false
+})
+
+service_provider_1.proposals.create!({
+  description: 'Hello there, I have a guy who can come in and do a great lawn mowing job for about 3 hours. Check my website for results.',
+  price: '300',
+  request_id: 16,
+  accept: false
+})
+
+service_provider_1.proposals.create!({
+  description: 'We do parties and can provide a clown for that day. Check out our website for videos of previous birthday parties.',
+  price: '150',
+  request_id: 10,
   accept: false
 })
 
