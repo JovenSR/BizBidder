@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
- 
+
 user1 = User.create!(firstName: 'Joven', lastName: 'Rai',  email:'user1@gmail.com', phone:'778-989-1020', userrole: 'user',  password_digest: User.digest('123'))
 user2 = User.create!(firstName: 'Khoa', lastName: 'Nguyen',  email:'user2@gmail.com', phone:'778-889-1122', userrole: 'user',  password_digest: User.digest('123'))
 user3 = User.create!(firstName: 'Hamish', lastName: 'Gray',  email:'user3@gmail.com', phone:'778-981-1547', userrole: 'user',  password_digest: User.digest('123'))
@@ -199,7 +199,8 @@ service_provider_1 = user13.service_providers.create!({
 service_provider_1.proposals.create!({
   description: 'I would like to take this request. My company has multiple large tents that would be perfect for your event. Contact me for more details.',
   price: '2800',
-  request_id: 1
+  request_id: 1,
+  accept: false
 })
 
 service_provider_2 = user14.service_providers.create!({
@@ -218,7 +219,8 @@ service_provider_2 = user14.service_providers.create!({
 service_provider_2.proposals.create!({
   description: 'I would like to take this request. My company is specialized in catering food for parties. For that price I can also provide a cake for the end of the night. For more information about our services, visit my webiste.',
   price: '1500',
-  request_id: 2
+  request_id: 2,
+  accept: false
 })
 
 service_provider_3 = user15.service_providers.create!({
@@ -237,7 +239,8 @@ service_provider_3 = user15.service_providers.create!({
 service_provider_3.proposals.create!({
   description: 'Hey, I can provide this service. Professional and been in business for over 15 years.',
   price: '320',
-  request_id: 3
+  request_id: 3,
+  accept: false
 })
 
 service_provider_4 = user16.service_providers.create!({
@@ -256,7 +259,8 @@ service_provider_4 = user16.service_providers.create!({
 service_provider_4.proposals.create!({
   description: 'I can provide 5 hair stylists for this event. We will arrive early and you wont be dissapointed.',
   price: '1500',
-  request_id: 4
+  request_id: 4,
+  accept: false
 })
 
 service_provider_5 = user17.service_providers.create!({
@@ -275,7 +279,8 @@ service_provider_5 = user17.service_providers.create!({
 service_provider_5.proposals.create!({
   description: 'Hello. We would like to take this request. Check out our website for pictures of our previous work.',
   price: '1500',
-  request_id: 5
+  request_id: 5,
+  accept: false
 })
 
 service_provider_6 = user18.service_providers.create!({
@@ -294,7 +299,8 @@ service_provider_6 = user18.service_providers.create!({
 service_provider_6.proposals.create!({
   description: 'We provide the best food catering services in town and have been serving the Lower Mainland for 11 years now. Let me know if you are interested.',
   price: '900',
-  request_id: 6
+  request_id: 6,
+  accept: false
 })
 
 service_provider_7 = user19.service_providers.create!({
@@ -313,7 +319,8 @@ service_provider_7 = user19.service_providers.create!({
 service_provider_7.proposals.create!({
   description: 'Will design, build, and plant the garden. Bid price includes design drawings, build materials, flowers and plants. Take a look at my instagram page for my results. Thanks.',
   price: '5200',
-  request_id: 7
+  request_id: 7,
+  accept: false
 })
 
 service_provider_8 = user20.service_providers.create!({
@@ -332,7 +339,8 @@ service_provider_8 = user20.service_providers.create!({
 service_provider_8.proposals.create!({
   description: 'Hello I am an expert makeup artist and my partner and I can do the makeup for everyone. Looking forward to hearing back from you.',
   price: '900',
-  request_id: 8
+  request_id: 8,
+  accept: false
 })
 
 service_provider_9 = user21.service_providers.create!({
@@ -351,7 +359,8 @@ service_provider_9 = user21.service_providers.create!({
 service_provider_9.proposals.create!({
   description: 'Hi, how are you? I have done a lot of large scale decorations like this before so let me know if you want more details. You cant beat me for the price and quality. Thanks.',
   price: '2450',
-  request_id: 9
+  request_id: 9,
+  accept: false
 })
 
 
@@ -371,7 +380,8 @@ service_provider_10 = user22.service_providers.create!({
 service_provider_10.proposals.create!({
   description: 'I have couple guys available for that date and you can look at our website for videos of some of our parties.',
   price: '150',
-  request_id: 10
+  request_id: 10,
+  accept: false
 })
 
 service_provider_11 = user23.service_providers.create!({
@@ -390,7 +400,8 @@ service_provider_11 = user23.service_providers.create!({
 service_provider_11.proposals.create!({
   description: 'I can teach you within 6 lessons and do it cheaper as well. I have traveled all over the world and have learned how to cook a variety of diverse dishes. You can look at my instagram for pics. Thanks.',
   price: '600',
-  request_id: 11
+  request_id: 11,
+  accept: false
 })
 
 service_provider_12 = user24.service_providers.create!({
@@ -409,8 +420,9 @@ service_provider_12 = user24.service_providers.create!({
 service_provider_12.proposals.create!({
   description: 'Hi, Im looking for side work and I can come in that day and work as long as you need. I can do other work around the house for just 50 dollars more and help out the whole day if needed.',
   price: '250',
-  request_id: 12
+  request_id: 12,
+  accept: false
 })
 
- 
+
 
