@@ -1,7 +1,7 @@
 // Place all the styles related to the requests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
- 
+
 
  .request-rows {
    display: grid;
@@ -18,10 +18,9 @@
   position: relative;
 }
 .request-row:hover {
-  background-color:  #476f8b;
+  background-color: #476F8B;
   color:white
 }
-
 
 
 .request_Taken {
@@ -31,7 +30,7 @@
 
 .request_Open {
   color: ivory;
-  background-color: #d9b44a; 
+  background-color: #d9b44a;
 }
 
 

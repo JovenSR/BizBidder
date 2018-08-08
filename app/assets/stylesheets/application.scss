@@ -8,7 +8,7 @@
 @import 'font-awesome.min.css';
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900');
 
- 
+
 
 
 body {
@@ -47,7 +47,7 @@ h1,h5 {
 }
 textarea {
   margin-bottom: 15px;
-} 
+}
 :focus{outline: none;}
 
 input {
@@ -72,13 +72,13 @@ input {
   padding: 3px 0 5px;
 }
 .login-btn {
-  margin-top: 15px; 
+  margin-top: 15px;
   width: 100px;
   border-radius: 5px;
   box-shadow: 2px 2px 2px rgba(156, 39, 176, 0.7);
   background: purple;
   color: white;
-  left: 35%; 
+  left: 35%;
 }
 .login-field {
   margin-bottom: 10px;
@@ -100,7 +100,7 @@ input {
 h2 {
   background-color: purple;
   text-align: center;
-  color: white; 
+  color: white;
   width: 260px;
   border-radius: 5px;
   box-shadow: 2px 2px 2px rgba(156, 39, 176, 0.7);
@@ -113,16 +113,18 @@ h2 {
   height: 150px;
   background-color: #ea5455;
   color:white;
-  padding:10px; 
+  padding:10px;
   box-shadow: 4px 4px 4px rgb(105, 101, 101);
 }
 a{
   outline: none;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
- 
- 
+a:hover{
+  color: white;
+}
+
 
 

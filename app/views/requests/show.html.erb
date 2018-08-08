@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="request-proposal-wrapper"> 
+<div class="request-proposal-wrapper">
 <div class="request-container <%="request_#{@request.status}" %>">
   <div>
     <h5><%= @request.name %></h5>
@@ -21,15 +21,15 @@
     <strong>Event date:</strong>
     <%= @request.eventDate %>
   </div>
- 
+
 
   <div>
       <strong>City:</strong>
       <%= @request.city %>,
       <strong>Province:</strong>
       <%= @request.province %>
-  </div> 
- 
+  </div>
+
   <div class="request-row-footer">
     <%= link_to 'Back', requests_path , :class => 'footer-btn' %>
 
@@ -59,7 +59,7 @@
 
 </div>
 
- 
+
 
 
 <% if current_user &&  current_user.id == @request.user_id %>
@@ -68,7 +68,7 @@
     <div class="response-rows">
       <% @proposals.each do |proposal| %>
         <div class="proposal-response-row <%= "proposal_#{proposal.accept}" %>" >
-        
+
           <div class="proposal-label"><%= truncate(proposal.description, :length => 37 ) %></div>
           <div class="proposal-label">Bid Price: <%=number_to_currency(proposal.price) %></div>
           <form method='POST' action="/update_accept">
