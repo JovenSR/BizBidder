@@ -24,34 +24,34 @@
 
 <div class="request-proposal-wrapper">
 <div class="request-container <%="request_#{@request.status}" %>">
-  <div>
-    <h5><%= @request.name %></h5>
+  <div style="display:flex; justify-content: center">
+    <h5 style="border-bottom: 1px solid white;"><%= @request.name %></h5>
   </div>
   <div>
-    <strong>Description:</strong>
-    <%= @request.description %>
-  </div>
-  <div>
-    <strong>Budget:</strong>
-    <%= number_to_currency(@request.budget) %>
-  </div>
-  <div>
-    <strong>Reply before:</strong>
-    <%= @request.proposalDeadline %>
-  </div>
-  <div>
-    <strong>Event date:</strong>
-    <%= @request.eventDate %>
-  </div>
+    <div>
+      <strong>Description:</strong>
+      <%= @request.description %>
+    </div>
+    <div style="border: 1px solid white; width: 35%;">
+      <strong>Budget:</strong>
+      <%= number_to_currency(@request.budget) %>
+    </div>
+    <div>
+      <strong>Reply before:</strong>
+      <%= @request.proposalDeadline %>
+    </div>
+    <div>
+      <strong>Event date:</strong>
+      <%= @request.eventDate %>
+    </div> 
 
-
-  <div>
+    <div>
       <strong>City:</strong>
       <%= @request.city %>,
       <strong>Province:</strong>
       <%= @request.province %>
+    </div>
   </div>
-
   <div class="request-row-footer">
     <%= link_to 'Back', requests_path , :class => 'footer-btn' %>
 
@@ -120,7 +120,7 @@
 <% end %>
 </div>
 
-<button type="button" class="statistic btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="statistic btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
   Launch Request Statistic
 </button>
 

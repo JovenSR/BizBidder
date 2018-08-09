@@ -12,13 +12,12 @@
 
 
 body {
-  font-family: 'Fauna One', serif;
-
+  font-family: 'Montserrat', sans-serif;
   padding-top: 70px;
-
 }
 h1,h5 {
-  font-family: 'Playfair Display', serif;
+
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
 
@@ -132,9 +131,12 @@ a:hover{
   color: white;
 }
 
+input{
+  color:black;
+}
+
+
 .back {
   background-repeat:no-repeat;
   background-size: cover;
 }
-
-

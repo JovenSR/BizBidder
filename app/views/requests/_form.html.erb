@@ -2,7 +2,7 @@
   <% if request.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(request.errors.count, "error") %> prohibited this request from being saved:</h2>
-
+ 
       <ul>
       <% request.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,42 +10,42 @@
       </ul>
     </div>
   <% end %>
-
+ 
   <div class="field">
     <%= form.label :name%>
-    <%= form.text_field :name  %>
+    <%= form.text_field :name ,:class => "request-name" %>
   </div>
-
+ 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description,hide_label: true, placeholder: "Leave details description", :class => 'form-control' %>
+    <%= form.text_area :description,hide_label: true, placeholder: "Leave details description", :class => 'request-description form-control' %>
   </div>
-
+ 
   <div class="field">
     <%= form.label :budget %>
     <%= form.text_field :budget %>
   </div>
-
+ 
   <div class="field>
     <%= form.label 'Proposal Deadline' %>
     <%= form.date_field :proposalDeadline %>
   </div>
-
+ 
   <div class="field">
     <%= form.label 'Event Date' %>
     <%= form.date_field :eventDate %>
   </div>
-
+ 
   <div class="field">
     <%= form.label :address %>
     <%= form.text_field :address%>
   </div>
-
+ 
   <div class="field">
     <%= form.label :city %>
     <%= form.text_field :city%>
   </div>
-
+ 
   <div class="field">
     <%= form.label :province %>
     <%= form.text_field :province, :value => 'BC' %>
@@ -55,18 +55,18 @@
   <div class="form-row">
       <%= form.select :category, ['Beauty Services', 'Event Services', 'Farm & Garden Services', 'Food Services'] , :class => 'custom-select'%>
   </div>
-
-
+ 
+ 
   <div class="field"   >
     <%= hidden_field :user_id, current_user.id %>
   </div>
-
+ 
   <div class="field"   >
     <%= hidden_field :status, @status %>
   </div>
-
+ 
   <div style="margin-bottom: 10px;"></div>
   <p >
     <%= form.submit nil, :class => 'btn btn-secondary' %>
   </p>
-<% end %>
+ <% end %>
