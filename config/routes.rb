@@ -5,14 +5,15 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
   get '/my_proposals' => 'service_providers#my_proposals'
+  get '/home' => 'pages#home'
   post '/update_accept' => 'requests#update_accept'
   resources :proposals
   root to: 'requests#index'
   resources :service_providers
-   
-   
-  resources :users 
-   
+
+
+  resources :users
+
   resources :requests
   namespace :charts do
     get "request_by_city"
