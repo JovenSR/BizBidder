@@ -14,7 +14,7 @@ user11 = User.create!(firstName: 'Cookie', lastName: 'Monster',  email:'user11@g
 user12 = User.create!(firstName: 'Arnold', lastName: 'Whitaker',  email:'user12@gmail.com', phone:'737-187-5322', userrole: 'user', password_digest: User.digest('123'))
 
 user13 = User.create!(firstName: 'Jashan', lastName: 'Khela',  email:'sp1@gmail.com', phone:'778-351 -5555', userrole: 'service_provider',  password_digest: User.digest('123'))
-user14 = User.create!(firstName: 'Mindy', lastName: 'Tan',  email:'sp2@hotmail.com', phone:'604-489-1122', userrole: 'service_provider',  password_digest: User.digest('123'))
+user14 = User.create!(firstName: 'Mindy', lastName: 'Tan',  email:'sp2@gmail.com', phone:'604-489-1122', userrole: 'service_provider',  password_digest: User.digest('123'))
 user15 = User.create!(firstName: 'Don', lastName: 'Johnson',  email:'sp3@gmail.com', phone:'555-689-1122', userrole: 'service_provider',  password_digest: User.digest('123'))
 user16 = User.create!(firstName: 'Carmen', lastName: 'Shin',  email:'sp4@gmail.com', phone:'778-987-5122', userrole: 'service_provider', password_digest: User.digest('123'))
 user17 = User.create!(firstName: 'Caroline', lastName: 'Jin',  email:'sp5@gmail.com', phone:'604-987-5122', userrole: 'service_provider', password_digest: User.digest('123'))
@@ -225,7 +225,7 @@ request16 = user1.requests.create!({
 
 
 service_provider_1 = user13.service_providers.create!({
-  companyName: 'Jay Tent & Events Services',
+  companyName: 'Jay Farm Services',
   street: '1304 Hornby St',
   city: 'Vancouver',
   province: 'BC',
@@ -233,7 +233,7 @@ service_provider_1 = user13.service_providers.create!({
   email: 'jashanservice@gmail.com',
   phone: '778-565-7855',
   serviceType: 'Event Services',
-  website: 'http://www.JayTents.com',
+  website: 'http://www.JayFarm.com',
   license: true
 })
 
@@ -266,15 +266,15 @@ service_provider_1.proposals.create!({
 })
 
 service_provider_2 = user14.service_providers.create!({
-  companyName: 'Mindy Catering Company',
+  companyName: 'Mindy Farming Company',
   street: '555 Seymour St',
   city: 'Vancouver',
   province: 'BC',
   postalCode: 'V7B 3B5',
-  email: 'mindyfoodservice@gmail.com',
+  email: 'mindyfarmservice@gmail.com',
   phone: '604-893-5627',
   serviceType: 'Food Services',
-  website: 'http://www.mindycatering.com',
+  website: 'http://www.mindyfarming.com',
   license: true
 })
 
@@ -487,4 +487,3 @@ service_provider_12.proposals.create!({
 })
 
 
- 

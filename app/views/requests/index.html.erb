@@ -22,7 +22,7 @@
       <div class="request-name"><h5><%= request.name %></h5></div>
       <div class="request-lines ">
 
-        <div class="request-line"><span>Description: </span><span><%= truncate(request.description, :length => 30 ) %></span></div>
+        <div class="request-line"><span>Description: </span><span><%= truncate(request.description, :length => 25 ) %></span></div>
         <div class="spacer"></div>
         <div class="request-line budget-group">
           <span><i class="fa fa-dollar custom" style="font-size:22px"></i>&nbsp;<%= (request.budget) %></span>
